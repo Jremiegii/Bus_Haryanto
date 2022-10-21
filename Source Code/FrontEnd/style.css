@@ -1,0 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Josefin Slab', serif;
+}
+
+body{
+    background-color: #5E65A7;
+    color: rgb(255, 255, 255);
+}
+
+/* Bagian NavBar*/
+.navbar{
+    background-color: rgb(0, 0, 0, 0.25);
+}
+
+#navbarNav{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    /*padding-left: 100px;*/
+    padding-right: 150px;
+}
+
+.nav-link, .navbar-toggler-icon{
+    color: rgb(255, 255, 255);
+}
+
+.navbar-nav > .nav-item > .nav-link{
+    color: rgb(255, 255, 255);
+}
+
+/* Bagian Judul */
+#Ucapan{
+    font-size: 55px;
+    text-align: justify
+}
+
+/* Bagian Deskripsi Pertama */
+#Deskripsi1{
+    font-size: 32px;
+    text-align: justify;
+    max-width: 460px;
+}
+
+/* Bagian Deskripsi Kedua */
+#Deskripsi2{
+    font-size: 32px;
+    text-align: justify;
+    /*max-width: 450px;*/
+    max-width: 580px;
+}
+
+/* Bagian Gambar */
+#GambarWayang{
+    background-color: pink;
+    border-radius: 50%;
+}
+
+/* Bagian Button Masuk Dan Button Daftar */
+#FontButton{
+    color: rgb(0, 0, 0);
+    background-color: rgb(228, 232, 55, 1); /*#E4E837*/
+    font-weight: bold;
+    margin-left: 12px;
+    width: 135px;
+    height: 40px;
+}
