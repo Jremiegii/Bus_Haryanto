@@ -5,20 +5,21 @@
 }
 
 body{
-    background-color: #5E65A7;
+    background-color: #9e5c99; /*#B97ab4*/
     color: rgb(255, 255, 255);
 }
 
 /* Bagian NavBar*/
 .navbar{
-    background-color: rgb(0, 0, 0, 0.25);
+    background-color: #Ee84e7;
 }
 
 #navbarNav{
-    font-size: 40px;
+    font-size: 30px;
     color: rgb(255, 255, 255);
     /*padding-left: 100px;*/
     padding-right: 150px;
+    max-height: 70px;
 }
 
 .nav-link, .navbar-toggler-icon{
@@ -26,7 +27,21 @@ body{
 }
 
 .navbar-nav > .nav-item > .nav-link{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav > .nav-item > .nav-link:hover{
+    color: rgb(255, 0, 0);
+    background-color: rgb(105,189,210);
+    border-radius: 40px 20px;
+}
+
+
+/* Bagian Konten */
+
+#Konten{
+    /* Memberikan jarak antara navbar dengan isi konten */
+    padding-top: 5rem;
 }
 
 /* Bagian Judul */
@@ -52,9 +67,11 @@ body{
 
 /* Bagian Gambar */
 #GambarWayang{
-    background-color: pink;
-    border-radius: 50%;
+    height: 550px;
+    width: 800px;
+    padding-right: 300px;
 }
+
 
 /* Bagian Button Masuk Dan Button Daftar */
 #FontButton{
