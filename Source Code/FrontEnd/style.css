@@ -4,19 +4,19 @@
     font-family: 'Josefin Slab', serif;
 }
 
+/* Bagian Body */
 body{
-    background-color: #9e5c99; /*#B97ab4*/
-    color: rgb(255, 255, 255);
+    background-color: #2D86C4;
+    color: #ffffff;
 }
 
 /* Bagian NavBar*/
 .navbar{
-    background-color: #Ee84e7;
+    background-color: #ffffff;
 }
 
 #navbarNav{
     font-size: 30px;
-    color: rgb(255, 255, 255);
     /*padding-left: 100px;*/
     padding-right: 150px;
     max-height: 70px;
@@ -76,7 +76,7 @@ body{
 /* Bagian Button Masuk Dan Button Daftar */
 #FontButton{
     color: rgb(0, 0, 0);
-    background-color: rgb(228, 232, 55, 1); /*#E4E837*/
+    background-color: rgba(237, 28, 36, 0.8);
     font-weight: bold;
     margin-left: 12px;
     width: 135px;

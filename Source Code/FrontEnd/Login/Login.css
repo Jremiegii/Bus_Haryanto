@@ -58,7 +58,7 @@ body{
 }
 
 /* Bagian Input & Tombol Perihal Kata Sandi */
-#floatingPassword, #TombolSubmit{
+#floatingPassword{
     width: 500px;
     border-radius: 10px;
     color:rgb(0, 0, 0);
@@ -77,4 +77,11 @@ body{
     background-color: rgba(237, 28, 36, 0.8);
     height: 45px;
     width: 110px;
+}
+
+/* Bagian Link Alternatif Untuk Daftar Masuk & Ganti Sandi*/
+#IconPenunjang{
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
 }
