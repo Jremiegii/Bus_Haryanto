@@ -1,13 +1,15 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: 'Josefin Slab', serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 body{
     background-color: #2D86C4; /*#B97ab4*/
     color: rgb(0, 0, 0);
     height: 100vh;
+    font-weight: bold;
 }
 
 /* Bagian NavBar*/

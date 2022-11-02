@@ -13,11 +13,10 @@ body{
 #navbarNav{
     font-size: 30px;
     /*padding-left: 100px;*/
-    padding-right: 150px;    
-}  
     padding-right: 150px;
-    max-height: 70px;
-}
+    max-height: 70px;    
+}  
+    
 
 .nav-link, .navbar-toggler-icon{
     color: rgb(255, 255, 255);
