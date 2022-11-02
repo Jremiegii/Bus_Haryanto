@@ -1,0 +1,82 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: A;
+    font-weight: bold;
+    position:relative;
+}
+
+/* Bagian Body */
+body{
+    background-color: #2D86C4;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.h1{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    background-color: white;
+}
+
+#navbarNav{
+    font-size: 30px;
+    /*padding-left: 100px;*/
+    padding-right: 150px;
+    max-height: 70px;    
+}  
+
+
+/* Bagian Konten */
+
+#Konten{
+    /* Memberikan jarak antara navbar dengan isi konten */
+    padding-top: 5rem;
+    padding-right: 5rem;
+    color:black;
+    height:100vh;
+    font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
+}
+
+#floatingIdPengguna{ /* Mengatur bagian id pengguna */
+    width:620px;
+    border-radius:10px;
+    align-content: center;
+}
+
+#floatingNama{ /* Mengatur bagian nama */
+    width:620px;
+    border-radius:10px;
+}
+
+#floatingNoTelpon{ /* Mengatur bagian no telpon */
+    width:620px;
+    border-radius:10px;
+}
+
+#floatingEmail{ /* Mengatur bagian email */
+    width:620px;
+    border-radius:10px;
+}
+#floatingSandi{ /* Mengatur bagian sandi*/
+    width: 305px;
+    border-radius:10px;
+
+}
+#floatingKonfirmasiSandi{ /* Mengatur bagian konfirmasi sandi */
+    width: 305px;
+    border-radius:10px;
+
+}
+
+#KeteranganInput{ /* Mengatur bagian id = keterangan input */
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#btn btn-danger{ /* Mengatur bagian button daftar */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}

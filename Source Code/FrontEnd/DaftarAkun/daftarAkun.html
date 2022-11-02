@@ -1,114 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Framework Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Import Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;300&display=swap" rel="stylesheet">
+    <!-- Import Icon dari Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="DaftarAkun.css">
+
     <title>Daftar Akun</title>
-    <style>
-        body{
-            height: 100%;
-            width:100%;
-            padding: 0px;
-            margin: 0px;
-            font-family:Arial, Helvetica, sans-serif;
-            background-color: #FFFFFF;
-            box-sizing: border-box;
-        }
-        .container-fluid{
-            width:100%;
-            height:80px;
-            background-color: #FFFFFF;
-            display:flex;
+  </head>
+  <!-- Masih error DiBagian Icon -->
+  <body>
+    <!-- Bagian NavBar -->
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!--fixed-top-->
 
-        }
-        .judul{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            padding:80px;
-            margin-left: 195px;
-            margin-bottom: 75px;
-            margin-right: 195px;
-            margin-top: 75px;
-            text-align: center;
-            align-self: center ;
-            color:black;
-            font-size: 25pt;
-        }
-
-        .blokBiru{
-            min-height:1320px;
-            max-width:400px;
-            background-color: #2D86C4;
-        }
-
-        .profile{
-          background-image: none;
-          text-align: center;
-        }
-
-        .input{
-          position: relative;
-          padding:20px;
-          margin:20px;
-
-          
-         
-         align-items: center;
-        }
-
-        .formEmail{
-          font-size: 1cm;
-        }
-    </style>
-</head>
-<body> 
-
-    <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="Img/Logo.png" alt="Logo" width="260px" heigth="200px">
-          </a>  
-        <div class="judul">Daftar Akun</div>
-        </div>
-    </nav>
-  
-              <div class="blokBiru" style="--bs-columns: 12;">
-                  <div class="profile">
-                  <img src="Img/profilePicture.png" alt="Logo" width="300px" heigth="150px">
-                  </div>
-              </div>
-
-    <div class="blokBiru" style="--bs-columns: 12 --bs-columns: 12;">
-      <div class="container text-center">
-        <div class="row">
-
-          <div class="col align-self-center">
-            One of three columns
+          <a class="navbar-brand" href="../index.html" id="navbarNav">
+            <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px">
+          </a>
           </div>
+        </div>
+      </nav>
+    </div>
 
+    <!-- Bagian Konten -->
+
+    <div id="Konten">
+      <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col-5">
+            <img src="../Img/profilePicture.png" alt="Logo" width="200px" heigth="200px">
+          </div>
+          <div class="col-7 bg-white">
+            <h1>Daftar Akun</h1>
+
+                <div class="form-floating mb-3 text-center">
+                <input type="text" class="form-control" id="floatingIdPengguna" placeholder=" Id Pengguna">
+                <label for="floatingIdPengguna" id="KeteranganInput">
+                  <i class="fa fa-id-badge" aria-hidden="true"></i> Id Pengguna
+                </label>
+                </div>
+      
+      
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingNama" placeholder=" Nama">
+                  <label for="floatingNama" id="KeteranganInput">
+                      <i class="fa fa-user" aria-hidden="true"></i> Nama
+                  </label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingNoTelpon" placeholder=" No Telpon">
+                    <label for="floatingNoTelpon" id="KeteranganInput">
+                        <i class="fa fa-phone" aria-hidden="true"></i> No. Telpon
+                    </label>
+                    </div>
+  
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingEmail" placeholder=" Email">
+                      <label for="floatingEmail" id="KeteranganInput">
+                          <i class="fa fa-envelope" aria-hidden="true"></i> Email
+                      </label>
+                      </div>
+                      
+                      <form class="row g-3">
+                        <div class="col-auto">
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingSandi" placeholder=" Kata Sandi">
+                        <label for="floatingSandi" id="KeteranganInput">
+                            <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi
+                        </label>
+                        </div>
+                      </div>
+  
+                        <div class="col-auto">
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control mb-3" id="floatingSandi" placeholder=" Konfirmasi Kata Sandi">
+                          <label for="floatingKonfirmasiSandi" id="KeteranganInput">
+                              <i class="fa fa-key" aria-hidden="true"></i> Konfirmasi Kata Sandi
+                          </label>
+                          </div>
+                         </div>
+                        </form>
+
+                        <button type="button" class="btn btn-danger">Daftar</button>
+
+          </div>
         </div>
       </div>
-    <div class="input">
-    <label for="formGroupExampleInput" class="form-label">Masukkan Email</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
     </div>
-              
-    <div class="input">
-    <label for="formGroupExampleInput2" class="form-label">Masukkan Sandi</label>
-    <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-    </div>
-    </div>
-              
-   
+  </body>
 
-   
-  
-    
-   
-  
-    
-
-</body>
 </html>
