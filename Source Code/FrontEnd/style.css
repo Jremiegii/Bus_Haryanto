@@ -4,23 +4,27 @@
     font-family: 'Josefin Slab', serif;
 }
 
-/* Bagian Body */
 body{
-    background-color: #2D86C4;
-    color: #ffffff;
+    background-color: #2D86C4; /*#B97ab4*/
+    color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+/* Bagian NavBar*/
+.navbar{
+    background-color: #ffffff;
 }
 
 #navbarNav{
     font-size: 30px;
+    color: #000000;
     /*padding-left: 100px;*/
-    padding-right: 150px;    
-}  
     padding-right: 150px;
     max-height: 70px;
 }
 
 .nav-link, .navbar-toggler-icon{
-    color: rgb(255, 255, 255);
+    color: #000000;
 }
 
 .navbar-nav > .nav-item > .nav-link{

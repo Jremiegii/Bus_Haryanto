@@ -1,0 +1,78 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Josefin Slab', serif;
+}
+
+body{
+    background-color: #2D86C4; /*#B97ab4*/
+    background-image: url('../Img/Wayang.png');
+    background-position: -150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
+/* Bagian NavBar*/
+.navbar{
+    background-color: #ffffff;
+}
+
+#navbarNav{
+    font-size: 30px;
+    color: #000000;
+    /*padding-left: 100px;*/
+    padding-right: 80px;
+    max-height: 70px;
+}
+
+.nav-link, .navbar-toggler-icon{
+    color: #000000;
+}
+
+.navbar-nav > .nav-item > .nav-link{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.navbar-nav > .nav-item > .nav-link:hover{
+    color: rgb(255, 0, 0);
+    background-color: rgb(105,189,210);
+    border-radius: 40px 20px;
+}
+
+/* Bagian Konten */
+
+#Konten{
+    /* Memberikan jarak antara navbar dengan isi konten */
+    padding-top: 6rem;
+}
+
+/* Bagian Background Untuk Link Penjualan Tiket, Pembatalan Tiket & Pembayaran Tiket */
+.Data{
+    background-color: #D9D9D9;
+    height: 100px;
+    width: 700px;
+    border-radius: 10px;
+}
+
+/* Bagian Link Untuk Penjualan Tiket, Pembatalan Tiket & Pembayaran Tiket */
+.Link{
+    font-size: 30px;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    max-width: 100px;
+}
+
+.Link > #Icon {
+    /* Untuk mengatur posisi bakcground dan link akses agar pas ke bagian tengah (simetris) */
+    margin-top: 35px;
+}
+
+/* Bagian Icon Untuk Penjualan Tiket, Pembatalan Tiket & Pembayaran Tiket */
+#Icon{
+    margin-left: 220px;
+}
