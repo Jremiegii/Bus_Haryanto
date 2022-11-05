@@ -14,14 +14,14 @@
         <!-- Import Icon dari Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- File Style CSS -->
-        <link rel="stylesheet" href="GantiSandi.css">
-        <title>Ganti Kata Sandi</title>
+        <link rel="stylesheet" href="NotifikasiPembayaranBerhasil.css">
+        <title>Selamat! Anda Telah Berhasil Melakukan Transaksi</title>
     </head>
     <body>
 
         <!-- Bagian NavBar -->
-
-    <div>
+          
+      <div>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
           <div class="container-fluid">
             <a class="navbar-brand" href="../index.html" id="navbarNav">
@@ -34,17 +34,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">
-                      Masuk
-                      <i class="fa fa-sign-in" aria-hidden="true"></i>
-                  </a>
-                  </i>
+                  <a class="nav-link" aria-current="page" href="#"> Dasbor </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">
-                    Daftar
-                    <i class="fa fa-user-plus" aria-hidden="true"></i>
-                  </a>
+                  <a class="nav-link" aria-current="page" href="CariTiket.html"> Tiket </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"> Laporan </a>
                 </li>
               </ul>
             </div>
@@ -55,31 +51,22 @@
     <!-- Bagian Konten -->
 
     <div id="Konten">
-        <!-- Bagian Input Perihal Kata Sandi-->
         <center>
-            <div id="Data">
-                <h1 id="Judul">Ganti Sandi</h1>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Kata Sandi Lama">
-                        <label for="floatingPassword" id="KeteranganInput">
-                            <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi Lama
-                        </label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Kata Sandi Baru">
-                        <label for="floatingPassword" id="KeteranganInput">
-                            <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi Baru
-                    </label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Konfirmasi Kata Sandi Baru">
-                        <label for="floatingPassword" id="KeteranganInput">
-                            <i class="fa fa-key" aria-hidden="true"></i> Konfirmasi Kata Sandi Baru
-                    </label>
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary" id="TombolSubmit">KIRIM</button>
-                    </div>
+            <!-- Bagian Untuk Background Paling Belakang(Ukuran Background Yang Besar) -->
+            <div id="Deskripsi">
+                <!-- Bagian Notifikasi -->
+                <div class="h-25 d-inline-block" id="IsiDeskripsi"> <!-- Bagian Untuk Background Pada Narasi(Ukuran Background Yang Kecil) -->
+                    <!-- Bagian Deskripsi Tentang Notifikasi Pembayaran Tiket -->
+                    <p class="text-center fs-3" id="Narasi">
+                        Terima kasih, Anda telah berhasil melakukan proses transaksi pembelian
+                        tiket bus. Silahkan cetak <a href="#" target="_blank">tiket bus.</a>
+                    </p>
+                    <br>
+                    <!-- Bagian Link Tentang Akses Menuju Belanja Lagi -->
+                    <p class="text-end fs-5"><a href="#">Belanja Lagi</a></p>
+                    <!-- Bagian Link Tentang Akses Menuju Kembali Ke Dasbor -->
+                    <p class="text-end fs-5"><a href="#">Kembali Ke Dasbor</a></p>
+                </div>
             </div>
         </center>
     </div>
