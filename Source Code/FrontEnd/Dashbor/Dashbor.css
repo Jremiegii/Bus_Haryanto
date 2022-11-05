@@ -34,8 +34,7 @@ body{
 
 #Konten{
     /* Memberikan jarak antara navbar dengan isi konten */
-    padding-top: 5rem;
-    /* padding-right: 5rem; */
+    padding-top: 8rem;
     color:black;
     height:100vh;
     font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
@@ -81,4 +80,17 @@ body{
     font-family: 'Josefin Slab', serif;
     font-weight: bold;
     color:white;
+}
+#KolomAgen{
+    background-color: #fff;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:10px;
+    width:900px;
+    
+ 
+    
+}
+#logo{
+
 }

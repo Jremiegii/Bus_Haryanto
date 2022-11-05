@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Import Framework Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Import Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;300&display=swap" rel="stylesheet">
+    <!-- Import Icon dari Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="Dashbor.css"> -->
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-weight: bold;
+            font-family: 'Josefin Slab', serif;
+            font-weight: bold;
+        }
+
+        /* Bagian Body */
+        body {
+            background-color: #2D86C4;
+            color: #ffffff;
+            font-weight: bold;
+
+        }
+
+        .h1 {
+            font-weight: bold;
+            font-family: 'Josefin Slab', serif;
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        #navbarNav {
+            font-size: 30px;
+            /*padding-left: 100px;*/
+            padding-right: 150px;
+            max-height: 70px;
+        }
+
+
+        /* Bagian Konten */
+
+        #Konten {
+            /* Memberikan jarak antara navbar dengan isi konten */
+
+            color: black;
+            height: 100vh;
+            font-weight: bold;
+            /* Mengatur tulisan agar cetak tebal atau bold */
+        }
+
+        #floatingIdPengguna {
+            /* Mengatur bagian id pengguna */
+            width: 620px;
+            border-radius: 10px;
+            align-content: center;
+        }
+
+        #floatingNama {
+            /* Mengatur bagian nama */
+            width: 620px;
+            border-radius: 10px;
+        }
+
+        #floatingNoTelpon {
+            /* Mengatur bagian no telpon */
+            width: 620px;
+            border-radius: 10px;
+        }
+
+        #floatingEmail {
+            /* Mengatur bagian email */
+            width: 620px;
+            border-radius: 10px;
+        }
+
+        #floatingSandi {
+            /* Mengatur bagian sandi*/
+            width: 305px;
+            border-radius: 10px;
+
+        }
+
+        #floatingKonfirmasiSandi {
+            /* Mengatur bagian konfirmasi sandi */
+            width: 305px;
+            border-radius: 10px;
+
+        }
+
+        #KeteranganInput {
+            /* Mengatur bagian id = keterangan input */
+            font-weight: bold;
+            font-family: 'Josefin Slab', serif;
+        }
+
+        #btn btn-danger {
+            /* Mengatur bagian button daftar */
+            font-family: 'Josefin Slab', serif;
+            font-weight: bold;
+            color: white;
+        }
+
+        #KolomAgen {
+            display: flex;
+            background-color: #fff;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            width: 900px;
+            align-self: center;
+
+        }
+
+        #nav-Link{
+            font-size: 60px;
+            /*padding-left: 100px;*/
+            padding-left:950px ;
+            color: black;
+          
+            
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Bagian NavBar -->
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html" id="navbarNav">
+                    <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                Dasbor
+                                <i class="fa fa-dashboard" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                Tiket
+                                <i class="fa fa-ticket" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                Laporan
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- Bagian Konten -->
+    <div class="container">
+        <div id="Konten" class="row">
+            <!-- Bagian Input Perihal Kata Sandi-->
+
+            <div id="KolomAgen" class="col">
+                <img src="../Img/profilePicture.png" alt="Logo" width="100px" heigth="100px">
+
+                <ul class="nav nav-pills nav-fill">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link enabled" href="SignOut.html" id="nav-Link">
+
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
