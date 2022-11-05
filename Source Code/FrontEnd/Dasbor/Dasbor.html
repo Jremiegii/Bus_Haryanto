@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dasbor</title>
 
     <!-- Import Framework Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -63,58 +63,13 @@
             /* Mengatur tulisan agar cetak tebal atau bold */
         }
 
-        #floatingIdPengguna {
-            /* Mengatur bagian id pengguna */
-            width: 620px;
-            border-radius: 10px;
-            align-content: center;
-        }
-
-        #floatingNama {
-            /* Mengatur bagian nama */
-            width: 620px;
-            border-radius: 10px;
-        }
-
-        #floatingNoTelpon {
-            /* Mengatur bagian no telpon */
-            width: 620px;
-            border-radius: 10px;
-        }
-
-        #floatingEmail {
-            /* Mengatur bagian email */
-            width: 620px;
-            border-radius: 10px;
-        }
-
-        #floatingSandi {
-            /* Mengatur bagian sandi*/
-            width: 305px;
-            border-radius: 10px;
-
-        }
-
-        #floatingKonfirmasiSandi {
-            /* Mengatur bagian konfirmasi sandi */
-            width: 305px;
-            border-radius: 10px;
-
-        }
 
         #KeteranganInput {
             /* Mengatur bagian id = keterangan input */
             font-weight: bold;
             font-family: 'Josefin Slab', serif;
         }
-
-        #btn btn-danger {
-            /* Mengatur bagian button daftar */
-            font-family: 'Josefin Slab', serif;
-            font-weight: bold;
-            color: white;
-        }
-
+        
         #KolomAgen {
             display: flex;
             background-color: #fff;
@@ -126,13 +81,32 @@
 
         }
 
-        #nav-Link{
+        #nav-Link {
             font-size: 60px;
             /*padding-left: 100px;*/
-            padding-left:950px ;
+            padding-left: 850px;
             color: black;
-          
-            
+
+
+        }
+
+        #judul {
+            font-weight: bold;
+            color: #2D86C4
+        }
+
+        .h1 {
+            font-weight: bold;
+        }
+
+        #temukanTiket {
+            padding-left: 50px;
+            color: white;
+        }
+
+        #floatingCari{
+            width: 200px;
+            border-radius:10px;
         }
     </style>
 
@@ -188,6 +162,9 @@
 
             <div id="KolomAgen" class="col">
                 <img src="../Img/profilePicture.png" alt="Logo" width="100px" heigth="100px">
+                <div id="judul" class="judul pt-4">
+                    <h1>Agen</h1>
+                </div>
 
                 <ul class="nav nav-pills nav-fill">
 
@@ -199,9 +176,31 @@
                         </a>
                     </li>
                 </ul>
+
             </div>
+
+            <form class="row">
+                <div class="container-fluid">
+                    <div id="temukanTiket" class="temukanTiket">
+                        <h1>Temukan Tiket Anda</h1>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-floating mb-3">
+                            <input type="search" class="form-control mb-3" id="floatingCari" placeholder=" Tiket Ku">
+                            <label for="floatingCari" id="KeteranganInput">
+                                <i class="fa fa-search" aria-hidden="true"></i> Tiket Ku
+                            </label>
+                        </div>
+                    </div>
+            </form>
         </div>
+        </div>
+        
+
     </div>
+
+
+
 
 
 
