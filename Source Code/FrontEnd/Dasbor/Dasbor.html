@@ -35,7 +35,7 @@
 
         }
 
-        .h1 {
+        h1 {
             font-weight: bold;
             font-family: 'Josefin Slab', serif;
         }
@@ -69,7 +69,7 @@
             font-weight: bold;
             font-family: 'Josefin Slab', serif;
         }
-        
+
         #KolomAgen {
             display: flex;
             background-color: #fff;
@@ -92,21 +92,49 @@
 
         #judul {
             font-weight: bold;
-            color: #2D86C4
+            color: black;
         }
 
-        .h1 {
+        h1 {
             font-weight: bold;
         }
 
         #temukanTiket {
-            padding-left: 50px;
+            padding-left: 100px;
             color: white;
         }
 
-        #floatingCari{
-            width: 200px;
-            border-radius:10px;
+        #floatingCari {
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        #Cari {
+            font-size: 20pt;
+            width: 100px;
+
+        }
+
+        #formCari {
+            padding-left: 75px;
+            font-weight: 700px;
+        }
+
+        #reviewTiket {
+            width: 250px;
+            height: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #tiket {
+            background-color: #fff;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            width: 40px;
+            height: 200px;
+            align-self: center;
         }
     </style>
 
@@ -179,25 +207,61 @@
 
             </div>
 
-            <form class="row">
-                <div class="container-fluid">
+            <form class="row g-3">
+
+                <div class="col-auto">
                     <div id="temukanTiket" class="temukanTiket">
                         <h1>Temukan Tiket Anda</h1>
                     </div>
-                    <div class="col-auto">
-                        <div class="form-floating mb-3">
-                            <input type="search" class="form-control mb-3" id="floatingCari" placeholder=" Tiket Ku">
-                            <label for="floatingCari" id="KeteranganInput">
-                                <i class="fa fa-search" aria-hidden="true"></i> Tiket Ku
-                            </label>
-                        </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="form-floating mb-3">
+                        <input type="search" class="form-control mb-3" id="floatingCari" placeholder=" Tiket Ku">
+                        <label for="floatingCari" id="KeteranganInput">
+                            <i class="fa fa-search" aria-hidden="true"></i> Tiket Ku
+                        </label>
                     </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="form-floating mb-3" id="formCari">
+                        <button type="button" class="btn btn-danger btn-lg" id="Cari">Cari</button>
+                    </div>
+                </div>
             </form>
         </div>
-        </div>
+
+        <!-- container 2 -->
+            <div id="reviewTiket" class="row">
+                <!-- Bagian Lihat Tiket-->
+
+                <div id="tiket" class="col">
+
+                    <div id="judul" class="judul">
+                        <h1>Agen</h1>
+                    </div>
+                </div>
+                </div>
+
+                <div id="reviewTiket2" class="row"></div>
+                <div id="tiket" class="col">
+
+                    <div id="judul" class="judul">
+                        <h1>Agen</h1>
+                    </div>
+                </div>
+                </div>
+            
+            </div>
+            </div>
+
+
+
+            </div>
         
 
-    </div>
+
 
 
 
