@@ -1,10 +1,14 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Merriweather', serif;
 }
 
 body{
+    background-image: url('../Img/Wayang.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #2D86C4; /*#B97ab4*/
     color: rgb(0, 0, 0);
     height: 100vh;
@@ -47,7 +51,7 @@ body{
 /* Bagian Background Untuk From Ganti Sandi */
 #Data{
     background-color: rgba(255, 255, 255, 0.52);
-    height: 450px;
+    height: 490px;
     width: 700px;
     border-radius: 10px;
 }
@@ -76,12 +80,29 @@ body{
     color:rgb(0, 0, 0);
     background-color: rgba(237, 28, 36, 0.8);
     height: 45px;
-    width: 110px;
+    width: 500px;
 }
 
-/* Bagian Link Alternatif Untuk Daftar Masuk & Ganti Sandi*/
-#IconPenunjang{
-    font-weight: bold;
+#LinkPintasan{
+    margin-top: 10px;
+}
+
+/* Bagian Link Alternatif Untuk Ganti Sandi & Daftar Akun*/
+#LupaKataSandi, #DaftarAkun{
     color: #000000;
     text-decoration: none;
+}
+
+/* Bagian Link Alternatif Untuk Ganti Sandi*/
+#LupaKataSandi{
+    font-size: 16px;
+}
+
+/* Bagian Link Alternatif Untuk Daftar Akun*/
+#DaftarAkun{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #ED1C24;
+    height: 40px;
+    width: 250px;
 }
