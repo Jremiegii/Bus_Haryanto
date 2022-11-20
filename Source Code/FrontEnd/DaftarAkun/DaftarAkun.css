@@ -2,21 +2,21 @@
     padding: 0px;
     margin: 0px;
     font-weight: bold;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Merriweather', seri f;
     font-weight: bold;
 }
 
 /* Bagian Body */
 body{
-    background-color: #2D86C4;
+    background-color: #209CF2;
     color: #ffffff;
     font-weight: bold;
   
 }
 
-.h1{
+h1{
     font-weight: bold;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Merriweather', seri f;
 }
 .navbar{
     background-color: white;
@@ -35,44 +35,53 @@ body{
 #Konten{
     /* Memberikan jarak antara navbar dengan isi konten */
     padding-top: 5rem;
-    /* padding-right: 5rem; */
+    padding-right: 5rem;
+    padding-left: 5rem;
     color:black;
     height:100vh;
     font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
 }
 
-#floatingIdPengguna{ /* Mengatur bagian id pengguna */
-    width:620px;
-    border-radius:10px;
-    align-content: center;
-}
-
-#floatingNama{ /* Mengatur bagian nama */
-    width:620px;
+#inputIdPengguna{ /* Mengatur bagian id pengguna */
+    width:400px;
     border-radius:10px;
 }
 
-#floatingNoTelpon{ /* Mengatur bagian no telpon */
-    width:620px;
+#inputNama{ /* Mengatur bagian nama */
+    width:400px;
     border-radius:10px;
 }
 
-#floatingEmail{ /* Mengatur bagian email */
-    width:620px;
+#inputNoTelpon{ /* Mengatur bagian no telpon */
+    width:400px;
     border-radius:10px;
 }
-#floatingSandi{ /* Mengatur bagian sandi*/
-    width: 305px;
+
+
+#inputNoPerusahaan{
+    width:400px;
+    border-radius:10px;
+}
+#inputEmail{ /* Mengatur bagian email */
+    width:400px;
+    border-radius:10px;
+}
+#inputAlamat{ /* Mengatur bagian alamat */
+    width:400px;
+    border-radius:10px;
+}
+#inputKataSandi{ /* Mengatur bagian sandi*/
+    width: 400px;
     border-radius:10px;
 
 }
-#floatingKonfirmasiSandi{ /* Mengatur bagian konfirmasi sandi */
-    width: 305px;
+#inputKonfirmasiSandi{ /* Mengatur bagian konfirmasi sandi */
+    width: 400px;
     border-radius:10px;
-
+    
 }
 
-#KeteranganInput{ /* Mengatur bagian id = keterangan input */
+#col-form-label{ /* Mengatur bagian id = keterangan input */
     font-weight: bold;
     font-family: 'Josefin Slab', serif;
 }
