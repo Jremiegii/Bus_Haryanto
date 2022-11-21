@@ -1,7 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Merriweather', serif;
 }
 
 body{
@@ -74,7 +74,7 @@ body{
     height: 52px;
     width: 500px;
     border-radius: 10px;
-    color:rgb(0, 0, 0);
+    color:rgb(0, 0, 0,);
     margin-top: 75px;
 }
 

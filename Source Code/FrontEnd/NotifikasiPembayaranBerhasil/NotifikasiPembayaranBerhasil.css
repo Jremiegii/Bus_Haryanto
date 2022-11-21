@@ -1,14 +1,14 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Merriweather', serif;
 }
 
 body{
     background-color: #2D86C4; /*#B97ab4*/
     background-image: url('../Img/Wayang.png');
-    background-position: -150px;
-    background-size: contain;
+    background-position: center;
+    background-size: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: rgb(0, 0, 0);
