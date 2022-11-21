@@ -28,7 +28,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html" id="navbarNav">
+          <a class="navbar-brand" href="#" id="navbarNav">
             <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px">
           </a>
           </div>
@@ -40,94 +40,94 @@
  <form action="DatabaseAgen.php" method="POST">
     <div id="Konten">
       <div class="container-fluid text-center">
-        <div class="row">
-          <div class="col-5">
-            <img src="../Img/profilePicture.png" alt="Logo" width="200px" heigth="200px">
+        <div class="row"> 
+          <div class="col-12">
+          <img src="../Img/profilePicture.png" alt="Logo" width="100px" heigth="100px">
           </div>
-          <div class="col-7 bg-white">
-             <!-- Bagian Judul -->
-            <h1>Daftar Akun</h1>
+          <div class="col-6">
+            <div class="row g-3">
+              <div class="col-2">
+                <label for="inputNama" class="col-form-label">Nama</label>
+                <div class="col-auto">
+                <input type="text" id="inputNama" class="form-control">
+              </div>
+              </div>
+            </div>
 
-             <!-- Bagian Id Pengguna -->
-                <div class="form-floating mb-3 text-center">
-                <input type="text" class="form-control" name="idAgen" id="floatingIdPengguna" placeholder=" Id Agen">
-                <label for="floatingIdPengguna" name="idAgen" id="KeteranganInput">
-                  <i class="fa fa-id-badge" aria-hidden="true"></i> Id Agen
-                </label>
-                </div>
+            <!-- ini bagian no. telpon -->
+            <div class="row g-3">
+              <div class="col-2">
+                <label for="inputNoTelpon" class="col-form-label">No Telpon</label>
+                <div class="col-auto">
+                <input type="text" id="inputNoTelpon" class="form-control">
+              </div>
+              </div>
+            </div>
 
-                 <!-- Bagian No Perusahaan -->
-                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" name="noPerusahaan" id="floatingNoPerusahaan" placeholder=" No Perusahaan">
-                  <label for="floatingNama" name="noPerusahaan"  id="KeteranganInput">
-                      <i class="fa fa-number" aria-hidden="true"></i> No Perusahaan
-                  </label>
-                  </div>
-      
-                 <!-- Bagian Nama -->
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control" name="nama" id="floatingNama" placeholder=" Nama">
-                  <label for="floatingNama" name="nama" id="KeteranganInput">
-                      <i class="fa fa-user" aria-hidden="true"></i> Nama Agen
-                  </label>
-                  </div>
+            <!-- ini bagian email -->
+            <div class="row g-3">
+              <div class="col-2">
+                <label for="inputEmail" class="col-form-label">Email</label>
+                <div class="col-auto">
+                <input type="text" id="inputEmail" class="form-control">
+              </div>
+              </div>
+            </div>
 
-                   <!-- Bagian No. Telpon -->
-                  <div class="form-floating mb-3">
-                    <input type="tel" class="form-control" name="noTelpon" id="floatingNoTelpon" placeholder=" No Telpon">
-                    <label for="floatingNoTelpon" name="noTelpon" id="KeteranganInput">
-                        <i class="fa fa-phone" aria-hidden="true"></i> No. Telpon
-                    </label>
-                    </div>  
-                    
-                    <!-- Bagian Alamat Agen -->
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control" name="alamatAgen" id="floatingAlamatAgen" placeholder=" Alamat Agen">
-                      <label for="floatingAlamatAgen" name="alamatAgen" id="KeteranganInput">
-                          <i class="fa fa-home" aria-hidden="true"></i> Alamat Agen
-                      </label>
-                      </div>
-                    
-                     <!-- Bagian Email -->
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control" name="email" id="floatingEmail" placeholder=" Email">
-                      <label for="floatingEmail" name="email" id="KeteranganInput">
-                          <i class="fa fa-envelope" aria-hidden="true"></i> Email
-                      </label>
-                      </div>
-
-                      
-                      
-                       <!-- Bagian Sandi -->
-                      <form class="row g-3">
-                        <div class="col-auto">
-                      <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="kataSandi" id="floatingSandi" placeholder=" Kata Sandi">
-                        <label for="floatingSandi" name="kataSandi" id="KeteranganInput">
-                            <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi
-                        </label>
-                        </div>
-                      </div>
-                      
-                       <!-- Bagian Konfirmasi Sandi -->
-                        <div class="col-auto">
-                        <div class="form-floating mb-3">
-                          <input type="password" class="form-control mb-3" name="konfirmasiSandi" id="floatingKonfirmasiSandi" placeholder=" Konfirmasi Kata Sandi">
-                          <label for="floatingKonfirmasiSandi" name="konfirmasiSandi" id="KeteranganInput">
-                              <i class="fa fa-key" aria-hidden="true"></i> Konfirmasi Kata Sandi
-                          </label>
-                          </div>
-                         </div>
-                        </form>
-
-                         <!-- Bagian Button Daftar -->
-                        <button type="submit" name="daftar" class="btn btn-danger">Daftar</button>
+            <!-- ini bagian alamat -->
+            <div class="row g-3">
+              <div class="col-2">
+                <label for="inputAlamat" class="col-form-label">Alamat</label>
+                <div class="col-auto">
+                <input type="text" id="inputAlamat" class="form-control">
+              </div>
+              </div>
+            </div>
 
           </div>
-        </div>
-      </div>
-    </div>
-    </form>
+
+          <!-- ini bagian id pengguna -->
+          <div class="col-6">
+            <div class="row g-3">
+              <div class="col-3">
+                <label for="inputIdPengguna" class="col-form-label">Id Pengguna</label>
+                <div class="col-auto">
+                <input type="text" id="inputIdPengguna" class="form-control">
+              </div>
+              </div>
+            </div>
+
+            <!-- ini bagian no perusahaan -->
+            <div class="row g-3">
+              <div class="col-3">
+                <label for="inputNoPerusahaan" class="col-form-label">No Perusahaan</label>
+                <div class="col-auto">
+                <input type="text" id="inputNoPerusahaan" class="form-control">
+              </div>
+              </div>
+            </div>
+
+            <!-- ini bagian kata sandi -->
+            <div class="row g-3">
+              <div class="col-3">
+                <label for="inputKataSandi" class="col-form-label">Kata Sandi</label>
+                <div class="col-auto">
+                <input type="text" id="inputKataSandi" class="form-control">
+              </div>
+              </div>
+            </div>
+
+          <!-- ini bagian konfirmasi kata sandi -->
+            <div class="row g-3">
+              <div class="col-4">
+                <label for="inputKonfirmasiSandi" class="col-form-label">Konfirmasi Kata Sandi</label>
+                <div class="col-auto">
+                <input type="text" id="inputKonfirmasiSandi" class="form-control">
+              </div>
+              </div>
+            </div>
+
+          </div>
   </body>
 
 </html>

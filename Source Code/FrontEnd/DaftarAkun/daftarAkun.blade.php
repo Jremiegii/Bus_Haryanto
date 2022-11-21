@@ -54,6 +54,7 @@
               </div>
             </div>
 
+            {{-- bagian no telpon --}}
             <div class="row g-3">
               <div class="col-2">
                 <label for="inputNoTelpon" class="col-form-label">No Telpon</label>
@@ -63,7 +64,7 @@
               </div>
             </div>
 
-
+            {{-- bagian email --}}
             <div class="row g-3">
               <div class="col-2">
                 <label for="inputEmail" class="col-form-label">Email</label>
@@ -73,6 +74,7 @@
               </div>
             </div>
 
+            {{-- bagian alamat --}}
             <div class="row g-3">
               <div class="col-2">
                 <label for="inputAlamat" class="col-form-label">Alamat</label>
@@ -84,7 +86,7 @@
 
           </div>
 
-
+          {{-- bagian id pengguna --}}
           <div class="col-6">
             <div class="row g-3">
               <div class="col-3">
@@ -95,6 +97,7 @@
               </div>
             </div>
 
+            {{-- bagian no perusahaan --}}
             <div class="row g-3">
               <div class="col-3">
                 <label for="inputNoPerusahaan" class="col-form-label">No Perusahaan</label>
@@ -104,6 +107,7 @@
               </div>
             </div>
 
+            {{-- bagian kata sandi --}}
             <div class="row g-3">
               <div class="col-3">
                 <label for="inputKataSandi" class="col-form-label">Kata Sandi</label>
@@ -113,6 +117,7 @@
               </div>
             </div>
 
+            {{-- bagian konfirmasi kata sandi --}}
             <div class="row g-3">
               <div class="col-4">
                 <label for="inputKonfirmasiSandi" class="col-form-label">Konfirmasi Kata Sandi</label>
