@@ -1,32 +1,34 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-weight: bold;
-    font-family: 'Merriweather', seri f;
-    font-weight: bold;
+    font-family: 'Merriweather', serif;
 }
 
 /* Bagian Body */
 body{
+    background-image: url('../Img/Wayang.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #209CF2;
-    color: #ffffff;
-    font-weight: bold;
-  
+    height:100vh;
 }
 
-h1{
+/*h1{
     font-weight: bold;
-    font-family: 'Merriweather', seri f;
+    font-family: 'Merriweather', serif;
 }
+*/
 .navbar{
     background-color: white;
 }
 
 #navbarNav{
     font-size: 30px;
-    /*padding-left: 100px;*/
+    /*padding-left: 100px;
     padding-right: 150px;
-    max-height: 70px;   
+    max-height: 70px; */
+      
 }  
 
 
@@ -35,59 +37,37 @@ h1{
 #Konten{
     /* Memberikan jarak antara navbar dengan isi konten */
     padding-top: 5rem;
-    padding-right: 5rem;
+    /*padding-right: 5rem;
     padding-left: 5rem;
-    color:black;
-    height:100vh;
+    color:black;*/
     font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
 }
 
-#inputIdPengguna{ /* Mengatur bagian id pengguna */
-    width:400px;
-    border-radius:10px;
+/*
+#Nama, #Email, #Alamat, #NoTelpon, #IdPengguna, #NoPerusahaan, #KataSandi, #KonfirmasiSandi{
+    width: 200px;
+    margin-right: 280px;
 }
+*/
 
-#inputNama{ /* Mengatur bagian nama */
-    width:400px;
-    border-radius:10px;
-}
-
-#inputNoTelpon{ /* Mengatur bagian no telpon */
-    width:400px;
-    border-radius:10px;
-}
-
-
-#inputNoPerusahaan{
-    width:400px;
-    border-radius:10px;
-}
-#inputEmail{ /* Mengatur bagian email */
-    width:400px;
-    border-radius:10px;
-}
-#inputAlamat{ /* Mengatur bagian alamat */
-    width:400px;
-    border-radius:10px;
-}
-#inputKataSandi{ /* Mengatur bagian sandi*/
+/* Bagian Input Nama, No Telepon, Email, Alamat, Id Pengguna, No Perusahaan, Kata Sandi & Konformasi Sandi*/
+#InputNama, #InputNoTelpon, #InputEmail, #InputAlamat, #InputIdPengguna, 
+#InputNoPerusahaan, #InputKataSandi, #InputKonfirmasiSandi{
     width: 400px;
     border-radius:10px;
-
-}
-#inputKonfirmasiSandi{ /* Mengatur bagian konfirmasi sandi */
-    width: 400px;
-    border-radius:10px;
-    
 }
 
-#col-form-label{ /* Mengatur bagian id = keterangan input */
-    font-weight: bold;
-    font-family: 'Josefin Slab', serif;
+#TombolKembali, #TombolDaftar{
+    color: rgb(255, 255, 255);
+    width: 110px;
+    height: 45px;
+    border-radius: 10px;
 }
 
-#btn btn-danger{ /* Mengatur bagian button daftar */
-    font-family: 'Josefin Slab', serif;
-    font-weight: bold;
-    color:white;
+#TombolDaftar{
+    background-color:  #ED1C24;
+}
+
+#TombolKembali{
+    background-color: #787878;
 }
