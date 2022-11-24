@@ -1,75 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Import Framework Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <!-- Import Google Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Merriweather:wght@300&family=Metal+Mania&display=swap" rel="stylesheet">
-        <!-- Import Icon dari Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- File Style CSS -->
-        <link rel="stylesheet" href="NotifikasiPembayaranBerhasil.css">
-        <title>Selamat! Anda Telah Berhasil Melakukan Transaksi</title>
-    </head>
-    <body>
 
-        <!-- Bagian NavBar -->
-          
-      <div>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html" id="navbarNav">
-              <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Import Framework Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- Import Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Merriweather:wght@300&family=Metal+Mania&display=swap"
+    rel="stylesheet" />
+  <!-- Import Icon dari Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- File Style CSS -->
+  <link rel="stylesheet" href="NotifikasiPembayaranBerhasil.css" />
+  <title>Selamat! Anda Telah Berhasil Melakukan Transaksi</title>
+</head>
+
+<body>
+  <!-- Bagian NavBar -->
+
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html" id="navbarNav">
+          <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"> Dasbor </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="CariTiket.html">
+                Tiket
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"> Laporan </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Bagian Konten -->
+
+  <div id="Konten">
+    <center>
+      <!-- Bagian Untuk Background Paling Belakang(Ukuran Background Yang Besar) -->
+      <div id="Deskripsi">
+        <!-- Bagian Notifikasi -->
+        <div class="h-25 d-inline-block bg-light" id="IsiDeskripsi">
+          <!-- Bagian Untuk Background Pada Narasi(Ukuran Background Yang Kecil) -->
+          <!-- Bagian Deskripsi Tentang Notifikasi Pembayaran Tiket -->
+          <p class="text-center fs-3" id="Narasi">
+            Terimakasih Anda telah sukses
+            <br>melakukan pembayaran.
+          </p>
+          <!-- Bagian Icon Sukses -->
+          <i class="fa fa-check-circle-o" aria-hidden="true" id="IconSukses">
+            Berhasil</i>
+          <br />
+        </div>
+        <div class="row g-3">
+          <!-- Bagian Button Selesai -->
+          <div class="col">
+            <a href="../Dasbor/Dasbor.html" class="btn btn-warning btn-lg enable" tabindex="-1" role="button"
+              aria-disabled="true" id="TombolSelesai">
+              Selesai
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#"> Dasbor </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="CariTiket.html"> Tiket </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"> Laporan </a>
-                </li>
-              </ul>
-            </div>
           </div>
-        </nav>
-    </div>
+          <!-- Bagian Button Cetak Struk -->
+          <div class="col">
+            <a href="#" class="btn btn-warning btn-lg enable" tabindex="-1" role="button" aria-disabled="true"
+              id="TombolCetak">
+              Cetak Struk
+            </a>
+          </div>
+        </div>
+      </div>
+    </center>
+  </div>
+</body>
 
-    <!-- Bagian Konten -->
-
-    <div id="Konten">
-        <center>
-            <!-- Bagian Untuk Background Paling Belakang(Ukuran Background Yang Besar) -->
-            <div id="Deskripsi">
-                <!-- Bagian Notifikasi -->
-                <div class="h-25 d-inline-block" id="IsiDeskripsi"> <!-- Bagian Untuk Background Pada Narasi(Ukuran Background Yang Kecil) -->
-                    <!-- Bagian Deskripsi Tentang Notifikasi Pembayaran Tiket -->
-                    <p class="text-center fs-3" id="Narasi">
-                        Terima kasih, Anda telah berhasil melakukan proses transaksi pembelian
-                        tiket bus. Silahkan cetak <a href="#" target="_blank">tiket bus.</a>
-                    </p>
-                    <br>
-                    <!-- Bagian Link Tentang Akses Menuju Belanja Lagi -->
-                    <p class="text-end fs-5"><a href="#">Belanja Lagi</a></p>
-                    <!-- Bagian Link Tentang Akses Menuju Kembali Ke Dasbor -->
-                    <p class="text-end fs-5"><a href="../index.html">Kembali Ke Dasbor</a></p>
-                </div>
-            </div>
-        </center>
-    </div>
-
-    </body>
 </html>
