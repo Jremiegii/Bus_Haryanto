@@ -1,31 +1,29 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-weight: bold;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Merriweather';
     font-weight: bold;
 }
 
 /* Bagian Body */
 body{
-    background-color: #2D86C4;
+    background-color:rgba(32, 156, 242, 1);
     color: #ffffff;
-    font-weight: bold;
   
 }
 
-.h1{
-    font-weight: bold;
-    font-family: 'Josefin Slab', serif;
+h1{
+    font-family: 'Merriweather', serif;
 }
 .navbar{
     background-color: white;
 }
 
 #navbarNav{
-    font-size: 30px;
+    font-size: 35px;
     /*padding-left: 100px;*/
-    padding-right: 150px;
+    padding-right: 60px;
+    align-text:top;
     max-height: 70px;   
 }  
 
@@ -40,57 +38,102 @@ body{
     font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
 }
 
-#floatingIdPengguna{ /* Mengatur bagian id pengguna */
-    width:620px;
-    border-radius:10px;
-    align-content: center;
-}
-
-#floatingNama{ /* Mengatur bagian nama */
-    width:620px;
-    border-radius:10px;
-}
-
-#floatingNoTelpon{ /* Mengatur bagian no telpon */
-    width:620px;
-    border-radius:10px;
-}
-
-#floatingEmail{ /* Mengatur bagian email */
-    width:620px;
-    border-radius:10px;
-}
-#floatingSandi{ /* Mengatur bagian sandi*/
-    width: 305px;
-    border-radius:10px;
-
-}
-#floatingKonfirmasiSandi{ /* Mengatur bagian konfirmasi sandi */
-    width: 305px;
-    border-radius:10px;
-
-}
-
-#KeteranganInput{ /* Mengatur bagian id = keterangan input */
+#KeteranganInput {
+    /* Mengatur bagian id = keterangan input */
     font-weight: bold;
     font-family: 'Josefin Slab', serif;
 }
 
-#btn btn-danger{ /* Mengatur bagian button daftar */
-    font-family: 'Josefin Slab', serif;
-    font-weight: bold;
-    color:white;
-}
-#KolomAgen{
+#KolomAgen {
+    display: flex;
     background-color: #fff;
-    padding-left:10px;
-    padding-right:10px;
-    border-radius:10px;
-    width:900px;
-    
- 
-    
-}
-#logo{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    width: 900px;
+    align-self: center;
 
 }
+
+#nav-Link {
+    font-size: 60px;
+    /*padding-left: 100px;*/
+    padding-left: 850px;
+    color: black;
+
+
+}
+
+#judul {
+    font-weight: bold;
+    color: black;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#temukanTiket {
+    padding-left: 100px;
+    color: white;
+}
+
+#floatingCari {
+    width: 250px;
+    border-radius: 10px;
+}
+
+#Cari {
+    font-size: 20pt;
+    width: 100px;
+
+}
+
+#formCari {
+    padding-left: 75px;
+    font-weight: 700px;
+}
+
+#reviewTiket {
+    width: 250px;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#kolomTiket {
+    background-color: #fff;
+    color:black;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+
+    margin-left:10px;
+    margin-right:10px;
+}
+
+/* bagian icon location */
+#IconLocation{
+    color:black;
+    font-size:35px;
+}
+
+/* bagian icon eye */
+#IconEye{
+    color:black;
+    font-size:35px;
+}
+
+/* bagian kolom alamat */
+#KolomAlamat{
+    color:black;
+}
+
+/* bagian find medsos */
+#Find{
+    font-size:20px;
+    color:black;
+    aling-text:end;
+}
+  

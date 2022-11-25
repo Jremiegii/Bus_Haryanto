@@ -16,133 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;300&display=swap" rel="stylesheet">
     <!-- Import Icon dari Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="Dashbor.css"> -->
-
-    <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            font-weight: bold;
-            font-family: 'Josefin Slab', serif;
-            font-weight: bold;
-        }
-
-        /* Bagian Body */
-        body {
-            background-color: #2D86C4;
-            color: #ffffff;
-            font-weight: bold;
-
-        }
-
-        h1 {
-            font-weight: bold;
-            font-family: 'Josefin Slab', serif;
-        }
-
-        .navbar {
-            background-color: white;
-        }
-
-        #navbarNav {
-            font-size: 30px;
-            /*padding-left: 100px;*/
-            padding-right: 150px;
-            max-height: 70px;
-        }
-
-
-        /* Bagian Konten */
-
-        #Konten {
-            /* Memberikan jarak antara navbar dengan isi konten */
-
-            color: black;
-            height: 100vh;
-            font-weight: bold;
-            /* Mengatur tulisan agar cetak tebal atau bold */
-        }
-
-
-        #KeteranganInput {
-            /* Mengatur bagian id = keterangan input */
-            font-weight: bold;
-            font-family: 'Josefin Slab', serif;
-        }
-
-        #KolomAgen {
-            display: flex;
-            background-color: #fff;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 10px;
-            width: 900px;
-            align-self: center;
-
-        }
-
-        #nav-Link {
-            font-size: 60px;
-            /*padding-left: 100px;*/
-            padding-left: 850px;
-            color: black;
-
-
-        }
-
-        #judul {
-            font-weight: bold;
-            color: black;
-        }
-
-        h1 {
-            font-weight: bold;
-        }
-
-        #temukanTiket {
-            padding-left: 100px;
-            color: white;
-        }
-
-        #floatingCari {
-            width: 250px;
-            border-radius: 10px;
-        }
-
-        #Cari {
-            font-size: 20pt;
-            width: 100px;
-
-        }
-
-        #formCari {
-            padding-left: 75px;
-            font-weight: 700px;
-        }
-
-        #reviewTiket {
-            width: 250px;
-            height: 100px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        #tiket {
-            background-color: #fff;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 10px;
-            width: 40px;
-            height: 200px;
-            align-self: center;
-        }
-    </style>
-
+    <link rel="stylesheet" href="Dasbor.css">
 
 
 </head>
 
-<body>
 
     <!-- Bagian NavBar -->
 
@@ -161,19 +39,16 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">
                                 Dasbor
-                                <i class="fa fa-dashboard" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">
                                 Tiket
-                                <i class="fa fa-ticket" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">
                                 Laporan
-                                <i class="fa fa-book" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>
@@ -233,43 +108,126 @@
         </div>
 
         <!-- container 2 -->
-            <div id="reviewTiket" class="row">
-                <!-- Bagian Lihat Tiket-->
+        <!-- <div class="container text-left horizontal-scroll-wrapper squares">
+            <div class="row" >
+              <div class="col" id="kolomTiket">
+                <p>Jog - Sby</p>
+                <p>11 Januari 2022</p>
+                <p>07:00 WIB</p>
+                <p><a href="selengkapnya.html">Selengkapnya</a></p>
+              </div>
+        </div> -->
 
-                <div id="tiket" class="col">
-
-                    <div id="judul" class="judul">
-                        <h1>Agen</h1>
+<div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+            <div class="col" id="kolomTiket">
+                <h2 class="card-title"><p>Jog - Sby</p></h2>
+                   <p>11 Januari 2022.</p>
+                    <p>07:00 WIB</p>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col">
+                            <p><a href="selengkapnya.html">Selengkapnya</a></p>
+                          </div>
+                          <div class="col">
+                            
+                          </div>
+                          <div class="col">
+                            <i class="fa fa-eye" aria-hidden="true" id="IconEye"></i>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+            <div class="col" id="kolomTiket">
+                <h2 class="card-title"><p>Jog - Smg</p></h2>
+                   <p>12 Januari 2022.</p>
+                    <p>12:00 WIB</p>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col">
+                            <p><a href="selengkapnya.html">Selengkapnya</a></p>
+                          </div>
+                          <div class="col">
+                            
+                          </div>
+                          <div class="col">
+                            <i class="fa fa-eye" aria-hidden="true" id="IconEye"></i>
+                          </div>
+                        </div>
+                      </div>
+                             
+                             
+                        </div>
                     </div>
-                </div>
-                </div>
-
-                <div id="reviewTiket2" class="row"></div>
-                <div id="tiket" class="col">
-
-                    <div id="judul" class="judul">
-                        <h1>Agen</h1>
+                   
+                  </div>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+ <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body"> 
+            <div class="col" id="kolomTiket">
+            <h2 class="card-title"><p>Jog - Soc</p></h2>
+               <p>15 Januari 2022.</p>
+                <p>19:00 WIB</p>
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <p><a href="selengkapnya.html">Selengkapnya</a></p>
+                      </div>
+                      <div class="col">
+                        
+                      </div>
+                      <div class="col">
+                        <i class="fa fa-eye" aria-hidden="true" id="IconEye"></i>
+                      </div>
                     </div>
+                  </div>
+              </div>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div> 
+
+      </div>
+    </div>
+
+    <div class="row mt-5">
+    <div class="col">
+    <div class="card">
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <i class="fa fa-map-marker" aria-hidden="true" id="IconLocation"></i>
+                        <div class="col" id="KolomAlamat">
+                        <p>Jl. Raya Solo-Jogja,</p>
+                        <p>Delanggu, Klaten</p>
+                         </div>
+                  </div>
+                  <div class="col" id="Find">
+                    <p>Temukan Kami: </p>
+                  </div>
+                  <div class="col">
+                    
+                  </div>
                 </div>
-                </div>
-            
+           
             </div>
-            </div>
-
-
-
-            </div>
-        
-
-
-
-
-
-
-
-
-
-
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
 </body>
-
 </html>
