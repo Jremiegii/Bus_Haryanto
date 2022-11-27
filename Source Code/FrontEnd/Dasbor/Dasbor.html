@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,267 +9,229 @@
 
     <!-- Import Framework Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- Import Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;300&display=swap" rel="stylesheet">
     <!-- Import Icon dari Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="Dashbor.css"> -->
-
-    <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            font-weight: bold;
-            font-family: 'Josefin Slab', serif;
-            font-weight: bold;
-        }
-
-        /* Bagian Body */
-        body {
-            background-color: #2D86C4;
-            color: #ffffff;
-            font-weight: bold;
-
-        }
-
-        h1 {
-            font-weight: bold;
-            font-family: 'Josefin Slab', serif;
-        }
-
-        .navbar {
-            background-color: white;
-        }
-
-        #navbarNav {
-            font-size: 30px;
-            /*padding-left: 100px;*/
-            padding-right: 150px;
-            max-height: 70px;
-        }
+    <link rel="stylesheet" href="Dasbor.css">
 
 
-        /* Bagian Konten */
+  </head>
 
-        #Konten {
-            /* Memberikan jarak antara navbar dengan isi konten */
+  <body>
+  <!-- Bagian NavBar -->
 
-            color: black;
-            height: 100vh;
-            font-weight: bold;
-            /* Mengatur tulisan agar cetak tebal atau bold */
-        }
-
-
-        #KeteranganInput {
-            /* Mengatur bagian id = keterangan input */
-            font-weight: bold;
-            font-family: 'Josefin Slab', serif;
-        }
-
-        #KolomAgen {
-            display: flex;
-            background-color: #fff;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 10px;
-            width: 900px;
-            align-self: center;
-
-        }
-
-        #nav-Link {
-            font-size: 60px;
-            /*padding-left: 100px;*/
-            padding-left: 850px;
-            color: black;
-
-
-        }
-
-        #judul {
-            font-weight: bold;
-            color: black;
-        }
-
-        h1 {
-            font-weight: bold;
-        }
-
-        #temukanTiket {
-            padding-left: 100px;
-            color: white;
-        }
-
-        #floatingCari {
-            width: 250px;
-            border-radius: 10px;
-        }
-
-        #Cari {
-            font-size: 20pt;
-            width: 100px;
-
-        }
-
-        #formCari {
-            padding-left: 75px;
-            font-weight: 700px;
-        }
-
-        #reviewTiket {
-            width: 250px;
-            height: 100px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        #tiket {
-            background-color: #fff;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 10px;
-            width: 40px;
-            height: 200px;
-            align-self: center;
-        }
-    </style>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html" id="navbarNav">
+          <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+                Dasbor
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+                Tiket
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+                Laporan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 
 
+  <!-- Bagian Konten -->
+  <div class="container">
+    <div id="Konten" class="row">
+      <!-- Bagian Input Perihal Kata Sandi-->
 
-</head>
-
-<body>
-
-    <!-- Bagian NavBar -->
-
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html" id="navbarNav">
-                    <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
-                                Dasbor
-                                <i class="fa fa-dashboard" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
-                                Tiket
-                                <i class="fa fa-ticket" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
-                                Laporan
-                                <i class="fa fa-book" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-
-    <!-- Bagian Konten -->
-    <div class="container">
-        <div id="Konten" class="row">
-            <!-- Bagian Input Perihal Kata Sandi-->
-
-            <div id="KolomAgen" class="col">
-                <img src="../Img/profilePicture.png" alt="Logo" width="100px" heigth="100px">
-                <div id="judul" class="judul pt-4">
-                    <h1>Agen</h1>
-                </div>
-
-                <ul class="nav nav-pills nav-fill">
-
-
-                    <li class="nav-item">
-                        <a class="nav-link enabled" href="SignOut.html" id="nav-Link">
-
-                            <i class="fa fa-sign-out" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-            <form class="row g-3">
-
-                <div class="col-auto">
-                    <div id="temukanTiket" class="temukanTiket">
-                        <h1>Temukan Tiket Anda</h1>
-                    </div>
-                </div>
-
-                <div class="col-auto">
-                    <div class="form-floating mb-3">
-                        <input type="search" class="form-control mb-3" id="floatingCari" placeholder=" Tiket Ku">
-                        <label for="floatingCari" id="KeteranganInput">
-                            <i class="fa fa-search" aria-hidden="true"></i> Tiket Ku
-                        </label>
-                    </div>
-                </div>
-
-                <div class="col-auto">
-                    <div class="form-floating mb-3" id="formCari">
-                        <button type="button" class="btn btn-danger btn-lg" id="Cari">Cari</button>
-                    </div>
-                </div>
-            </form>
+      <div id="KolomAgen" class="col">
+        <img src="../Img/profilePicture.png" alt="Logo" width="100px" heigth="100px">
+        <div id="judul" class="judul pt-4">
+          <h1>Agen</h1>
         </div>
 
-        <!-- container 2 -->
-            <div id="reviewTiket" class="row">
-                <!-- Bagian Lihat Tiket-->
+        <ul class="nav nav-pills nav-fill">
 
-                <div id="tiket" class="col">
 
-                    <div id="judul" class="judul">
-                        <h1>Agen</h1>
-                    </div>
-                </div>
-                </div>
+          <li class="nav-item">
+            <a class="nav-link enabled" href="SignOut.html" id="nav-Link">
 
-                <div id="reviewTiket2" class="row"></div>
-                <div id="tiket" class="col">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
 
-                    <div id="judul" class="judul">
-                        <h1>Agen</h1>
-                    </div>
+      </div>
+
+      <form class="row g-3">
+
+        <div class="col-auto">
+          <div id="temukanTiket" class="temukanTiket">
+            <h1>Temukan Tiket Anda</h1>
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <div class="form-floating mb-3">
+            <input type="search" class="form-control mb-3" id="floatingCari" placeholder=" Tiket Ku">
+            <label for="floatingCari" id="KeteranganInput">
+              <i class="fa fa-search" aria-hidden="true"></i> Tiket Ku
+            </label>
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <div class="form-floating mb-3" id="formCari">
+            <button type="button" class="btn btn-danger btn-lg" id="Cari">Cari</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- container 2 -->
+    <!-- <div class="container text-left horizontal-scroll-wrapper squares">
+              <div class="row" >
+                <div class="col" id="kolomTiket">
+                  <p>Jog - Sby</p>
+                  <p>11 Januari 2022</p>
+                  <p>07:00 WIB</p>
+                  <p><a href="selengkapnya.html">Selengkapnya</a></p>
                 </div>
+          </div> -->
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="col" id="kolomTiket">
+              <h2 class="card-title">
+                <p>Jog - Sby</p>
+              </h2>
+              <p>11 Januari 2022.</p>
+              <p>07:00 WIB</p>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <p><a href="selengkapnya.html">Selengkapnya</a></p>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  <div class="col">
+                    <i class="fa fa-eye" aria-hidden="true" id="IconEye"></i>
+                  </div>
                 </div>
-            
+              </div>
             </div>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="col" id="kolomTiket">
+              <h2 class="card-title">
+                <p>Jog - Smg</p>
+              </h2>
+              <p>12 Januari 2022.</p>
+              <p>12:00 WIB</p>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <p><a href="selengkapnya.html">Selengkapnya</a></p>
+                  </div>
+                  <div class="col">
+
+                  </div>
+                  <div class="col">
+                    <i class="fa fa-eye" aria-hidden="true" id="IconEye"></i>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
+          </div>
 
+        </div>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="col" id="kolomTiket">
+              <h2 class="card-title">
+                <p>Jog - Soc</p>
+              </h2>
+              <p>15 Januari 2022.</p>
+              <p>19:00 WIB</p>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <p><a href="selengkapnya.html">Selengkapnya</a></p>
+                  </div>
+                  <div class="col">
 
+                  </div>
+                  <div class="col">
+                    <i class="fa fa-eye" aria-hidden="true" id="IconEye"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <i class="fa fa-map-marker" aria-hidden="true" id="IconLocation"></i>
+                  <div class="col" id="KolomAlamat">
+                    <p>Jl. Raya Solo-Jogja,</p>
+                    <p>Delanggu, Klaten</p>
+                  </div>
+                </div>
+                <div class="col" id="Find">
+                  <p>Temukan Kami: </p>
+                </div>
+                <div class="col">
+
+                </div>
+              </div>
 
             </div>
-        
-
-
-
-
-
-
-
-
-
-
-</body>
-
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
 </html>
