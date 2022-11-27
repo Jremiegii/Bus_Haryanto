@@ -25,30 +25,51 @@ body{
 
 #navbarNav{
     font-size: 30px;
-    /*padding-left: 100px;
-    padding-right: 150px;
-    max-height: 70px; */
-      
-}  
-
+}
 
 /* Bagian Konten */
 
 #Konten{
     /* Memberikan jarak antara navbar dengan isi konten */
     padding-top: 5rem;
-    /*padding-right: 5rem;
-    padding-left: 5rem;
-    color:black;*/
     font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
 }
 
-/*
+/* Bagian label/jdul input Nama, No Telepon, Email, Alamat, Id Pengguna, No Perusahaan, Kata Sandi & Konformasi Sandi*/
 #Nama, #Email, #Alamat, #NoTelpon, #IdPengguna, #NoPerusahaan, #KataSandi, #KonfirmasiSandi{
     width: 200px;
+    margin-top: 10px;
+}
+
+/* Bagian label/judul input Nama */
+#Nama{
+    margin-right: 340px;
+}
+
+/* Bagian label/judul input No telpon */
+#NoTelpon{
+    margin-right: 310px;
+}
+
+/* Bagian label/judul input Email dan Alamat */
+#Email, #Alamat{
+    margin-right: 340px;
+}
+
+/* Bagian label/judul input Id Pengguna dan No Perusahaan */
+#IdPengguna, #NoPerusahaan{
     margin-right: 280px;
 }
-*/
+
+/* Bagian label/judul input Kata Sandi */
+#KataSandi{
+    margin-right: 300px;
+}
+
+/* Bagian label/judul input Konfirmasi Kata Sandi */
+#KonfirmasiSandi{
+    margin-right: 210px;
+}
 
 /* Bagian Input Nama, No Telepon, Email, Alamat, Id Pengguna, No Perusahaan, Kata Sandi & Konformasi Sandi*/
 #InputNama, #InputNoTelpon, #InputEmail, #InputAlamat, #InputIdPengguna, 
@@ -57,6 +78,7 @@ body{
     border-radius:10px;
 }
 
+/* Bagian Tombol Kembali Dan Tombol Daftar */
 #TombolKembali, #TombolDaftar{
     color: rgb(255, 255, 255);
     width: 110px;
@@ -64,10 +86,12 @@ body{
     border-radius: 10px;
 }
 
+/* Bagian Tombol Daftar */
 #TombolDaftar{
     background-color:  #ED1C24;
 }
 
+/* Bagian Tombol Kembali */
 #TombolKembali{
     background-color: #787878;
 }

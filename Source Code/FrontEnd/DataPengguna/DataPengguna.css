@@ -1,0 +1,88 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Merriweather", serif;
+}
+
+body {
+    background-color: #2d86c4;
+    /*#B97ab4*/
+    background-image: url("../Img/Wayang.png");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
+/* Bagian NavBar*/
+.navbar {
+    background-color: #ffffff;
+}
+
+#navbarNav {
+    font-size: 30px;
+    color: #000000;
+    /*padding-left: 100px;*/
+    padding-right: 80px;
+    max-height: 70px;
+}
+
+.nav-link, .navbar-toggler-icon{
+    color: #000000;
+}
+
+.navbar-nav>.nav-item>.nav-link{
+    color: rgb(0, 0, 0);
+}
+
+/* Bagian Konten */
+
+#Konten{
+    /* Memberikan jarak antara navbar dengan isi konten */
+    padding-top: 6rem;
+    justify-content: center;
+}
+
+/* Bagian Background Untuk From Data Pengguna */
+#Data{
+    background-color: rgba(255, 255, 255, 0.52);
+    height: 530px;
+    width: 700px;
+    border-radius: 10px;
+}
+
+/* Bagian Judul */
+#Judul{
+    padding-top: 2rem;
+}
+
+/* Bagian label/judul input Nama */
+#Nama{
+    margin-right: 300px;
+}
+
+/* /* Bagian label/judul input No Telpon */
+#NoTelpon{
+    margin-right: 265px;
+}
+
+/* /* Bagian label/judul input Jumlah Tiket & Posisi Duduk */
+#JumlahTiket, #PosisiDuduk{
+    margin-right: 245px;
+}
+
+/* Bagian Input Nama, No Telpon, Jumlah Tiket & Posisi Duduk */
+.form-control{
+    height: 40px;
+    width: 350px;
+}
+
+/* Bagian Tombol Krim */
+#TombolKrim{
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+    background-color: rgba(237, 28, 36, 0.8);
+    margin-top: 20px;
+}
