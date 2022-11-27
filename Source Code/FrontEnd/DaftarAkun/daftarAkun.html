@@ -35,81 +35,83 @@
     <!-- Bagian Konten -->
     <form action="DatabaseAgen.php" method="POST">
         <div id="Konten">
-            <div class="container-fluid">
-                <center>
-                    <!-- Bagian Button Upload Profil -->
-                    <div>
-                        <img src="../Img/profilePicture.png" alt="Logo" width="100px" heigth="100px">
-                        <i class="fa fa-plus" aria-hidden="true"><input class="form-control form-control-sm" id="formFileSm" type="file"></i>
-                    </div>
-                    <!-- Bagian Input Data Diri -->
-                    <div id="form">
-                        <div class="row g-2">
-                            <!-- Bagian Input Nama -->
-                            <div class="col">
-                                <label for="Nama" class="form-label" id="Nama">Nama</label>
-                                <input type="text" class="form-control" placeholder="Nama" aria-label="Nama" Id="InputNama">
+            <div id="Data">
+                <div class="container-fluid">
+                    <center>
+                        <!-- Bagian Button Upload Profil -->
+                        <div>
+                            <img src="../Img/profilePicture.png" alt="Logo" width="100px" heigth="100px">
+                            <i class="fa fa-plus" aria-hidden="true"><input class="form-control form-control-sm" id="formFileSm" type="file"></i>
+                        </div>
+                        <!-- Bagian Input Data Diri -->
+                        <div id="form">
+                            <div class="row g-2">
+                                <!-- Bagian Input Nama -->
+                                <div class="col">
+                                    <label for="Nama" class="form-label" id="Nama">Nama</label>
+                                    <input type="text" class="form-control" placeholder="Nama" aria-label="Nama" Id="InputNama">
+                                </div>
+                                <!-- Bagian Input Id Pengguna -->
+                                <div class="col">
+                                    <label for="Id Pengguna" class="form-label" id="IdPengguna">ID Pengguna</label>
+                                    <input type="text" class="form-control" placeholder="Id Pengguna" aria-label="Id Pengguna" id="InputIdPengguna">
+                                </div>
                             </div>
-                            <!-- Bagian Input Id Pengguna -->
-                            <div class="col">
-                                <label for="Id Pengguna" class="form-label" id="IdPengguna">ID Pengguna</label>
-                                <input type="text" class="form-control" placeholder="Id Pengguna" aria-label="Id Pengguna" id="InputIdPengguna">
+                            <div class="row g-3">
+                                <!-- Bagian Input No Telpon -->
+                                <div class="col">
+                                    <label for="No Telpon" class="form-label" id="NoTelpon">No Telpon</label>
+                                    <input type="tel" class="form-control" placeholder="No Telpon" aria-label="No Telpon" id="InputNoTelpon">
+                                </div>
+                                <!-- Bagian Input No Perusahaan -->
+                                <div class="col">
+                                    <label for="No Perusahaan" class="form-label" id="NoPerusahaan">No Perusahaan</label>
+                                    <input type="text" class="form-control" placeholder="No Perusahaan" aria-label="No Perusahaan" id="InputNoPerusahaan">
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <!-- Bagian Input Email -->
+                                <div class="col">
+                                    <label for="Email" class="form-label" id="Email">Email</label>
+                                    <input type="email" class="form-control" placeholder="Email" aria-label="Email" id="InputEmail">
+                                </div>
+                                <!-- Bagian Input Kata Sandi -->
+                                <div class="col">
+                                    <label for="Kata Sandi" class="form-label" id="KataSandi">Kata Sandi</label>
+                                    <input type="password" class="form-control" placeholder="Kata Sandi" aria-label="Kata Sandi" id="InputKataSandi">
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <!-- Bagian Input Alamat -->
+                                <div class="col">
+                                    <label for="Alamat" class="form-label" id="Alamat">Alamat</label>
+                                    <input type="text" class="form-control" placeholder="Alamat" aria-label="Alamat" id="InputAlamat">
+                                </div>
+                                <!-- Bagian Input Konfirmasi Kata Sandi -->
+                                <div class="col">
+                                    <label for="Konfirmasi Kata Sandi" class="form-label" id="KonfirmasiSandi">Konfirmasi Kata Sandi</label>
+                                    <input type="password" class="form-control" placeholder="Konfirmasi Kata Sandi" aria-label="Konfirmasi Kata Sandi" id="InputKonfirmasiSandi">
+                                </div>
                             </div>
                         </div>
+                        <br><br>
+                        <!-- Bagian Button Kembali & Daftar -->
                         <div class="row g-3">
-                            <!-- Bagian Input No Telpon -->
+                            <!-- Bagian Button Kembali -->
                             <div class="col">
-                                <label for="No Telpon" class="form-label" id="NoTelpon">No Telpon</label>
-                                <input type="tel" class="form-control" placeholder="No Telpon" aria-label="No Telpon" id="InputNoTelpon">
+                                <a href="../index.html" class="btn btn-warning btn-lg enable" tabindex="-1" role="button" aria-disabled="true" id="TombolKembali">
+                                    Kembali
+                                </a>
                             </div>
-                            <!-- Bagian Input No Perusahaan -->
+                            <!-- Bagian Button Kembali -->
                             <div class="col">
-                                <label for="No Perusahaan" class="form-label" id="NoPerusahaan">No Perusahaan</label>
-                                <input type="text" class="form-control" placeholder="No Perusahaan" aria-label="No Perusahaan" id="InputNoPerusahaan">
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <!-- Bagian Input Email -->
-                            <div class="col">
-                                <label for="Email" class="form-label" id="Email">Email</label>
-                                <input type="email" class="form-control" placeholder="Email" aria-label="Email" id="InputEmail">
-                            </div>
-                            <!-- Bagian Input Kata Sandi -->
-                            <div class="col">
-                                <label for="Kata Sandi" class="form-label" id="KataSandi">Kata Sandi</label>
-                                <input type="password" class="form-control" placeholder="Kata Sandi" aria-label="Kata Sandi" id="InputKataSandi">
+                                <a href="#" class="btn btn-warning btn-lg enable" tabindex="-1" role="button" aria-disabled="true" id="TombolDaftar">
+                                    Daftar
+                                </a>
                             </div>
                         </div>
-                        <div class="row g-3">
-                            <!-- Bagian Input Alamat -->
-                            <div class="col">
-                                <label for="Alamat" class="form-label" id="Alamat">Alamat</label>
-                                <input type="text" class="form-control" placeholder="Alamat" aria-label="Alamat" id="InputAlamat">
-                            </div>
-                            <!-- Bagian Input Konfirmasi Kata Sandi -->
-                            <div class="col">
-                                <label for="Konfirmasi Kata Sandi" class="form-label" id="KonfirmasiSandi">Konfirmasi Kata Sandi</label>
-                                <input type="password" class="form-control" placeholder="Konfirmasi Kata Sandi" aria-label="Konfirmasi Kata Sandi" id="InputKonfirmasiSandi">
-                            </div>
-                        </div>
-                    </div>
-                    <br><br>
-                    <!-- Bagian Button Kembali & Daftar -->
-                    <div class="row g-3">
-                        <!-- Bagian Button Kembali -->
-                        <div class="col">
-                            <a href="../index.html" class="btn btn-warning btn-lg enable" tabindex="-1" role="button" aria-disabled="true" id="TombolKembali">
-                                Kembali
-                            </a>
-                        </div>
-                        <!-- Bagian Button Kembali -->
-                        <div class="col">
-                            <a href="#" class="btn btn-warning btn-lg enable" tabindex="-1" role="button" aria-disabled="true" id="TombolDaftar">
-                                Daftar
-                            </a>
-                        </div>
-                    </div>
-                </center>
+                    </center>
+                </div>
             </div>
         </div>
     </form>

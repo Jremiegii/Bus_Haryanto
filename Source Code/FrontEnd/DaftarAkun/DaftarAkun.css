@@ -35,6 +35,12 @@ body{
     font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
 }
 
+/* Bagian Background Untuk From Ganti Sandi */
+#Data{
+    background-color: rgba(255, 255, 255, 0.52);
+    border-radius: 10px;
+}
+
 /* Bagian label/jdul input Nama, No Telepon, Email, Alamat, Id Pengguna, No Perusahaan, Kata Sandi & Konformasi Sandi*/
 #Nama, #Email, #Alamat, #NoTelpon, #IdPengguna, #NoPerusahaan, #KataSandi, #KonfirmasiSandi{
     width: 200px;

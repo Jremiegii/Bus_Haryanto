@@ -1,13 +1,13 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Merriweather', serif;
 }
 
 body{
     background-color: #2D86C4; /*#B97ab4*/
     background-image: url('../Img/Wayang.png');
-    background-position: -150px;
+    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -24,7 +24,7 @@ body{
     font-size: 30px;
     color: #000000;
     /*padding-left: 100px;*/
-    padding-right: 80px;
+    padding-right: 50px;
     max-height: 70px;
 }
 
@@ -34,52 +34,56 @@ body{
 
 .navbar-nav > .nav-item > .nav-link{
     color: rgb(0, 0, 0);
-    font-weight: bold;
-}
-
-.navbar-nav > .nav-item > .nav-link:hover{
-    color: rgb(255, 0, 0);
-    background-color: rgb(105,189,210);
-    border-radius: 40px 20px;
 }
 
 /* Bagian Konten */
-
 #Konten{
     /* Memberikan jarak antara navbar dengan isi konten */
     padding-top: 6rem;
 }
 
+/* Bagian Background Untuk From Pembayaran */
 #Data{
     background-color: rgba(255, 255, 255, 0.52);
-    height: 500px;
+    height: 490px;
     width: 1000px;
     border-radius: 10px;
 }
 
+/* Bagian Judul */
 #Judul{
     padding-top: 2rem;
 }
 
-.form-label{
-    margin-top: 20px;
-    margin-right: 260px;
+/* Bagian Harga */
+#Harga{
+    background-color: #E0E0E0;
+    font-size: 32px;
 }
 
-.form-control{
-    height: 40px;
-    width: 350px;
+/* Bagian Opsi Untuk Memilih Tunai & Non-Tunai */
+.form-select-lg{
+    font-size: 28px;
+    text-align: center;
+    width: 200px;
 }
 
-#TombolLanjutkan{
-    font-weight: bold;
-    color:rgb(0, 0, 0);
-    background-color: rgba(237, 28, 36, 0.8);
-    margin-top: 20px;
+/* Bagian Tombol Kembali Dan Tombol Bayar */
+#TombolKembali, #TombolBayar{
+    color: rgb(255, 255, 255);
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
 }
 
-input{
-    text-align:center;
-    font-weight: bold;
-    color:rgb(0, 0, 0);
+/* Bagian Tombol Bayar */
+#TombolBayar{
+    background-color:  #ED1C24;
+    margin-right: 200px;
+}
+
+/* Bagian Tombol Kembali */
+#TombolKembali{
+    background-color: #787878;
+    margin-left: 200px;
 }

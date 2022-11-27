@@ -23,7 +23,7 @@ body{
     font-size: 30px;
     color: #000000;
     /*padding-left: 100px;*/
-    padding-right: 150px;
+    padding-right: 50px;
     max-height: 70px;
 }
 
@@ -33,12 +33,6 @@ body{
 
 .navbar-nav > .nav-item > .nav-link{
     color: rgb(0, 0, 0);
-}
-
-.navbar-nav > .nav-item > .nav-link:hover{
-    color: rgb(255, 0, 0);
-    background-color: rgb(105,189,210);
-    border-radius: 40px 20px;
 }
 
 /* Bagian Konten */
