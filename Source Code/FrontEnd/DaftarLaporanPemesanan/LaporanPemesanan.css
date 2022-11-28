@@ -1,0 +1,93 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Merriweather', serif;
+}
+
+body{
+    background-color: #209CF2; /*#B97ab4*/
+    /*
+    background-image: url('../Img/Wayang.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0);
+    */
+    height: 100vh;
+}
+
+/* Bagian NavBar*/
+.navbar{
+    background-color: #ffffff;
+}
+
+#navbarNav{
+    font-size: 30px;
+    color: #000000;
+    /*padding-left: 100px;*/
+    padding-right: 50px;
+    max-height: 70px;
+}
+
+.nav-link, .navbar-toggler-icon{
+    color: #000000;
+}
+
+.navbar-nav > .nav-item > .nav-link{
+    color: rgb(0, 0, 0);
+}
+
+/* Bagian Konten */
+
+#Konten{
+    /* Memberikan jarak antara navbar dengan isi konten */
+    padding-top: 6rem;
+}
+
+/* Bagian Judul */
+#Judul{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+/* Bagian Background Untuk Tabel */
+#Data{
+    height: 65vh;
+    width: 90%;
+    background-color: #ffffff;
+}
+
+/* Bagian Tabel */
+.table{
+    font-size: 22px;
+    text-align: center;
+    max-height: max-content;
+}
+
+/* Bagian Data Pada Tabel */
+#DataPerBaris{
+    background-color: #D9D9D9;
+    border: 10px, solid, black;
+}
+
+/* Bagian Icon Pada Data Tabel */
+#IconMata{
+    color: rgb(0, 0, 0);
+}
+
+/* Bagian Input Untuk Searching */
+.input-group{
+    width: 290px;
+}
+
+/* Bagian Tombol Cari */
+#TombolCari{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #ED1C24;
+    height: 40px;
+    width: 100px;
+    color: #000000;
+    text-decoration: none;
+}

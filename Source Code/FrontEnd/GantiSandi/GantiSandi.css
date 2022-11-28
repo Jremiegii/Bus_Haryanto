@@ -12,23 +12,11 @@ body{
 
 /* Bagian NavBar*/
 .navbar{
-    background-color: #ffffff;
+    background-color: white;
 }
 
 #navbarNav{
     font-size: 30px;
-    color: #000000;
-    /*padding-left: 100px;*/
-    padding-right: 50px;
-    max-height: 70px;
-}
-
-.nav-link, .navbar-toggler-icon{
-    color: #000000;
-}
-
-.navbar-nav > .nav-item > .nav-link{
-    color: rgb(0, 0, 0);
 }
 
 /* Bagian Konten */
