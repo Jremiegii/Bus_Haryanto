@@ -10,20 +10,26 @@ body{
     color: #ffffff;
 }
 
-h1{
-    font-family: 'Merriweather', serif;
-}
+/* Bagian NavBar*/
 .navbar{
-    background-color: white;
+    background-color: #ffffff;
 }
 
 #navbarNav{
-    font-size: 35px;
+    font-size: 30px;
+    color: #000000;
     /*padding-left: 100px;*/
     padding-right: 50px;
-    max-height: 70px;   
-    text-align: top;
-}  
+    max-height: 70px;
+}
+
+.nav-link, .navbar-toggler-icon{
+    color: #000000;
+}
+
+.navbar-nav > .nav-item > .nav-link{
+    color: rgb(0, 0, 0);
+} 
 
 
 /* Bagian Konten */
