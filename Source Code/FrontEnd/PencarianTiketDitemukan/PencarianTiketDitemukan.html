@@ -14,8 +14,8 @@
         <!-- Import Icon dari Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- File Style CSS -->
-        <link rel="stylesheet" href="PencariaanTidakDitemukan.css">
-        <title>Tiket Tidak Ditemukan</title>
+        <link rel="stylesheet" href="PencarianTiketDitemukan.css">
+        <title>Hasil Pencarain Tiket</title>
     </head>
     <body>
 
@@ -51,11 +51,29 @@
         <!-- Bagian Konten -->
 
         <div id="Konten">
-            <div id="Notifikasi">
-                <h1>Ups....</h1>
-                <h1><i class="fa fa-search" aria-hidden="true">
-                </i>Hasil Pencarian Tidak Ditemukan!</h1>
-            </div>
+            <!-- Bagian Tabel Data -->
+            <center>
+                <div class="container">
+                    <div class="row justify-content-center" id="DataTiket">
+                        <div class="col-3" id="LatarLokasi">
+                            <td><h4 id="Lokasi"><i class="fa fa-location-arrow" aria-hidden="true"> Solo </i></h4></td>
+                            <td><h4 id="Lokasi"><i class="fa fa-map-marker" aria-hidden="true"> Jogja </i></h4></td>
+                        </div>
+                        <div class="col-5" id="LatarWaktu">
+                            <td><h4 id="Waktu">Rp. *****</h4></td>
+                            <td><!-- Bagian Icon ganti Sandi Baru -->
+                                <a href="../KetersediaanTiket/KetersediaanTiket.html" class="btn btn-warning btn-lg" tabindex="-1" role="button" id="TombolBeli">
+                                  Beli
+                                </a>
+                            </td>
+                        </div>
+                        <div class="col-4" id="LatarWaktu">
+                            <td><h4 id="Waktu">Pukul 17:00 WIB</h4></td>
+                            <td><h4 id="Waktu">11 januari 2020</h4></td>
+                        </div>
+                    </div>
+                </div>
+            </center>
         </div>
 
     </body>
