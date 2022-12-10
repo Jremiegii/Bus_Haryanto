@@ -10,7 +10,6 @@ body{
     color: #ffffff;
 }
 
-/* Bagian NavBar*/
 .navbar{
     background-color: #ffffff;
 }
@@ -31,7 +30,6 @@ body{
     color: rgb(0, 0, 0);
 } 
 
-
 /* Bagian Konten */
 
 #Konten{
@@ -42,12 +40,7 @@ body{
     font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
 }
 
-#KeteranganInput {
-    /* Mengatur bagian id = keterangan input */
-    font-weight: bold;
-    font-family: 'Josefin Slab', serif;
-}
-
+/* Bagian Profil */
 #KolomAgen {
     display: flex;
     background-color: #fff;
@@ -59,100 +52,33 @@ body{
 
 }
 
-#nav-Link {
+/* Bagian Icon Keluar */
+#IconKeluar {
     font-size: 60px;
-    /*padding-left: 100px;*/
-    padding-left: 850px;
-    color: black;
-
-
-}
-
-#judul {
-    font-weight: bold;
+    /* padding-left: 850px; */
+    text-align: right;
     color: black;
 }
 
-h1 {
-    font-weight: bold;
+/* Bagian Tombol Untu Membeli Tiket */
+#TombolTiket{
+    background-color: rgba(237, 28, 36, 0.8);
+    color: rgb(255, 255, 255);
 }
 
-#temukanTiket {
-    padding-left: 100px;
-    color: white;
-}
-
-#floatingCari {
-    width: 250px;
+/* Bagian Untuk Mengatur Backgorund Alamat Dan Medsos */
+#DataAlamatMedsos{
+    background-color: #E7D9D9;
     border-radius: 10px;
-}
-
-#Cari {
-    font-size: 20pt;
-    width: 100px;
-
-}
-
-#formCari {
-    padding-left: 75px;
-    font-weight: 700px;
-}
-
-#reviewTiket {
-    width: 250px;
     height: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
-#kolomTiket {
-    background-color: #fff;
-    color:black;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-
-    margin-left:10px;
-    margin-right:10px;
+/* Bagian Untuk Mengatur Antara Deskripsi Lokasi Dan Medsos Agar Ke Tengah Secara Vertikal */
+#LokasiMedsos{
+    margin-top: 25px;
 }
 
-#KolomAlamat{
-    background-color: #fff;
-    color:black;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-
-    margin-left:10px;
-    margin-right:10px;
-}
-
-#Find{
-    background-color: #fff;
-    color:black;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-
-    margin-left:10px;
-    margin-right:10px; 
-}
-/* bagian icon location */
-#IconLocation{
-    color:black;
-    font-size:35px;
-}
-
-/* bagian icon eye */
-#IconEye{
-    color:black;
-    font-size:35px;
-}
-
+/* Bagian Icon Medsos */
 #IconMedsos{
-    color:black;
-    font-size:35px;
+    font-size: 22px;
 }

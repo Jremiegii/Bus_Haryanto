@@ -70,26 +70,28 @@
               </div>
             </div>
             <!-- Bagian Form Cari Tiket -->
-            <div class="row">
-              <!-- Bagian Input Kota Asal -->
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Kota Asal" aria-label="Kota Asal" id="InputKeberangkatan">
+            <form action="" method="POST">
+              <div class="row">
+                <!-- Bagian Input Kota Asal -->
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Kota Asal" aria-label="Kota Asal" id="InputKeberangkatan" name="Asal">
+                </div>
+                <!-- Bagian Input Kota Tujuan -->
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Kota Tujuan" aria-label="Kota Tujuan" id="InputKeberangkatan"name="Tujuan">
+                </div>
+                <!-- Bagian Input Jadwal Keberangkatan -->
+                <div class="col-12">
+                  <input type="date" class="form-control" placeholder="Jadwal Keberangkatan" id="InputKeberangkatan" name="Waktu">
+                </div>
+                <!-- Bagian Tombol Cari -->
+                <div class="col-12">
+                  <center>
+                    <button type="submit" class="btn" id="TombolSubmit" name="Krim">Krim</button>
+                  </center>
+                </div>
               </div>
-              <!-- Bagian Input Kota Tujuan -->
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Kota Tujuan" aria-label="Kota Tujuan" id="InputKeberangkatan">
-              </div>
-              <!-- Bagian Input Jadwal Keberangkatan -->
-              <div class="col-12">
-                <input type="datetime-local" class="form-control" placeholder="Jadwal Keberangkatan" id="InputKeberangkatan">
-              </div>
-              <!-- Bagian Tombol Cari -->
-              <div class="col-12">
-                <center>
-                  <button type="submit" class="btn" id="TombolSubmit">Krim</button>
-                </center>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
