@@ -18,7 +18,7 @@
         <title>Ganti Kata Sandi</title>
     </head>
     <body>
-
+<form action="inputGantiSandi.php" method="POST">
         <!-- Bagian NavBar -->
         <div>
           <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -37,30 +37,36 @@
         <center>
             <div id="Data">
                 <h1 id="Judul">Ganti Sandi</h1>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="idPengguna" id="floatingPassword" placeholder="Pengguna">
+                    <label for="floatingPassword" id="KeteranganInput">
+                        <i class="fa fa-id-card" aria-hidden="true"></i> Pengguna
+                    </label>
+                </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Kata Sandi Lama">
+                        <input type="password" class="form-control" name="sandiLama" id="floatingPassword" placeholder="Kata Sandi Lama">
                         <label for="floatingPassword" id="KeteranganInput">
                             <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi Lama
                         </label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Kata Sandi Baru">
+                        <input type="password" class="form-control" name="sandiBaru" id="floatingPassword" placeholder="Kata Sandi Baru">
                         <label for="floatingPassword" id="KeteranganInput">
                             <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi Baru
                     </label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Konfirmasi Kata Sandi Baru">
+                        <input type="password" class="form-control" name="konfirmSandi" id="floatingPassword" placeholder="Konfirmasi Kata Sandi Baru">
                         <label for="floatingPassword" id="KeteranganInput">
                             <i class="fa fa-key" aria-hidden="true"></i> Konfirmasi Kata Sandi Baru
                     </label>
                     </div>
                     <div class="col-auto">
-                        <button type="submit" class="btn btn-primary" id="TombolSubmit">KIRIM</button>
+                        <button type="submit" class="btn btn-primary" name="kirim" id="TombolSubmit">KIRIM</button>
                     </div>
             </div>
         </center>
     </div>
-
+</form>
     </body>
 </html>
