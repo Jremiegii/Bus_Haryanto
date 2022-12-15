@@ -70,24 +70,24 @@
               </div>
             </div>
             <!-- Bagian Form Cari Tiket -->
-            <form action="" method="POST">
+            <form action="../PencarianDitemukan/PencarianDitemukan.php" method="POST">
               <div class="row">
                 <!-- Bagian Input Kota Asal -->
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Kota Asal" aria-label="Kota Asal" id="InputKeberangkatan" name="Asal">
+                  <input type="text" class="form-control" placeholder="Kota Asal" aria-label="Kota Asal" id="InputKeberangkatan" value="" name="Asal">
                 </div>
                 <!-- Bagian Input Kota Tujuan -->
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Kota Tujuan" aria-label="Kota Tujuan" id="InputKeberangkatan"name="Tujuan">
+                  <input type="text" class="form-control" placeholder="Kota Tujuan" aria-label="Kota Tujuan" id="InputKeberangkatan" value="" name="Tujuan">
                 </div>
                 <!-- Bagian Input Jadwal Keberangkatan -->
                 <div class="col-12">
-                  <input type="date" class="form-control" placeholder="Jadwal Keberangkatan" id="InputKeberangkatan" name="Waktu">
+                  <input type="date" class="form-control" placeholder="Jadwal Keberangkatan" id="InputKeberangkatan" value="" name="Waktu">
                 </div>
                 <!-- Bagian Tombol Cari -->
                 <div class="col-12">
                   <center>
-                    <button type="submit" class="btn" id="TombolSubmit" name="Krim">Krim</button>
+                    <button type="submit" class="btn" id="TombolSubmit" name="Kirim">Krim</button>
                   </center>
                 </div>
               </div>

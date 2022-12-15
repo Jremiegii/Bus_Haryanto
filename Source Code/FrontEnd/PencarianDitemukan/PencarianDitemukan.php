@@ -85,52 +85,35 @@
                 $result = mysqli_query($conn, $sql);
                 $check = mysqli_num_rows($result);
                 if($check > 0){
-                    echo "<div class='container'>";
-                    echo "<div class='row justify-content-center' id='DataTiket'>";
-                            echo "<div class='col-3' id='LatarLokasi'>";
-                                echo "<td><h4 id='Lokasi'><i class='fa fa-location-arrow' aria-hidden='true'> $Asal </i></h4></td>";
-                                echo "<td><h4 id='Lokasi'><i class='fa fa-map-marker' aria-hidden='true'> $Tujuan </i></h4></td>";
-                            echo "</div>";
-                            echo "<div class='col-5' id='LatarWaktu'>";
-                                echo "<td><h4 id='Waktu'>" .$row['harga_tiket']. "</h4></td>";
-                                echo "<td>";
-                                    echo "<a href='../KetersediaanTiket/KetersediaanTiket.html' class='btn btn-warning btn-lg' tabindex='-1' role='button' id='TombolBeli'>
-                                    Beli
-                                    </a>";
-                                echo "</td>";
-                            echo "</div>";
-                            echo "<div class='col-4' id='LatarWaktu'>";
-                                echo "<td><h4 id='Waktu'>Pukul 17:00 WIB</h4></td>";
-                                echo "<td><h4 id='Waktu'>$Waktu</h4></td>";
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<div class='container'>";
+                        echo "<div class='row justify-content-center' id='DataTiket'>";
+                                echo "<div class='col-3' id='LatarLokasi'>";
+                                    echo "<td><h4 id='Lokasi'><i class='fa fa-location-arrow' aria-hidden='true'> $Asal </i></h4></td>";
+                                    echo "<td><h4 id='Lokasi'><i class='fa fa-map-marker' aria-hidden='true'> $Tujuan </i></h4></td>";
+                                echo "</div>";
+                                echo "<div class='col-5' id='LatarWaktu'>";
+                                    echo "<td><h4 id='Waktu'>" .$row['harga_tiket']. "</h4></td>";
+                                    echo "<td>";
+                                        echo "<a href='../KetersediaanTiket/KetersediaanTiket.html' class='btn btn-warning btn-lg' tabindex='-1' role='button' id='TombolBeli'>
+                                        Beli
+                                        </a>";
+                                    echo "</td>";
+                                echo "</div>";
+                                echo "<div class='col-4' id='LatarWaktu'>";
+                                    echo "<td><h4 id='Waktu'>" .$row['jam_keberangkatan_bus']. "</h4></td>";
+                                    echo "<td><h4 id='Waktu'>$Waktu</h4></td>";
+                                echo "</div>";
                             echo "</div>";
                         echo "</div>";
-                    echo "</div>";
+                    }
                 } else {
-                    echo("<script>window.location ='../PencariaanTidakDitemukan/PencariaanTidakDitemukan.php' </script>");
+                    echo("<script>window.location ='../PencarianTidakDitemukan/PencarianTidakDitemukan.php' </script>");
                 }
+
+                mysqli_close($conn);
                 
                 ?>
-
-                <!-- <div class="container">
-                    <div class="row justify-content-center" id="DataTiket">
-                        <div class="col-3" id="LatarLokasi">
-                            <td><h4 id="Lokasi"><i class="fa fa-location-arrow" aria-hidden="true"> Solo </i></h4></td>
-                            <td><h4 id="Lokasi"><i class="fa fa-map-marker" aria-hidden="true"> Jogja </i></h4></td>
-                        </div>
-                        <div class="col-5" id="LatarWaktu">
-                            <td><h4 id="Waktu">Rp. *****</h4></td>
-                            <td>
-                                <a href="../KetersediaanTiket/KetersediaanTiket.html" class="btn btn-warning btn-lg" tabindex="-1" role="button" id="TombolBeli">
-                                  Beli
-                                </a>
-                            </td>
-                        </div>
-                        <div class="col-4" id="LatarWaktu">
-                            <td><h4 id="Waktu">Pukul 17:00 WIB</h4></td>
-                            <td><h4 id="Waktu">11 januari 2020</h4></td>
-                        </div>
-                    </div>
-                </div> -->
             </center>
         </div>
     </body>
