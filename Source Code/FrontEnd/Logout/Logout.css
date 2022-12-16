@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Merriweather', serif;
+}
+
+/* Bagian Body */
+body{
+    background-color:#209CF2;
+    color: #ffffff;
+}
+
+.navbar{
+    background-color: #ffffff;
+}
+
+#navbarNav{
+    font-size: 30px;
+    color: #000000;
+    /*padding-left: 100px;*/
+    padding-right: 50px;
+    max-height: 70px;
+}
+
+.nav-link, .navbar-toggler-icon{
+    color: #000000;
+}
+
+.navbar-nav > .nav-item > .nav-link{
+    color: rgb(0, 0, 0);
+} 
+
+/* Bagian Konten */
+
+#Konten{
+    /* Memberikan jarak antara navbar dengan isi konten */
+    padding-top: 8rem;
+    color:black;
+    height:100vh;
+    font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
+}
+
+/* Bagian Profil */
+#KolomAgen {
+    display: flex;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    width: 900px;
+    align-self: center;
+
+}
+
+/* Bagian Icon Keluar */
+#IconKeluar {
+    font-size: 60px;
+    /* padding-left: 850px; */
+    text-align: right;
+    color: black;
+}
+
+/* Bagian Tombol Untu Membeli Tiket */
+#TombolTiket{
+    background-color: rgba(237, 28, 36, 0.8);
+    color: rgb(255, 255, 255);
+}
+
+/* Bagian Untuk Mengatur Backgorund Alamat Dan Medsos */
+#DataAlamatMedsos{
+    background-color: #E7D9D9;
+    border-radius: 10px;
+    height: 100px;
+}
+
+/* Bagian Untuk Mengatur Antara Deskripsi Lokasi Dan Medsos Agar Ke Tengah Secara Vertikal */
+#LokasiMedsos{
+    margin-top: 25px;
+}
+
+/* Bagian Icon Medsos */
+#IconMedsos{
+    font-size: 22px;
+}

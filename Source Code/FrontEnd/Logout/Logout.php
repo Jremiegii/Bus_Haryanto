@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dasbor</title>
+  <title>Dasbor - Logout</title>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <!-- Import Framework Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -18,7 +18,7 @@
   <!-- Import SweetAlert -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!-- File Style CSS -->
-  <link rel="stylesheet" href="Dasbor.css">
+  <link rel="stylesheet" href="Logout.css">
 
 
 </head>
@@ -70,9 +70,26 @@
             </div>
             <div class="col">
               <!-- Bagian Icon Keluar -->
-              <a class="nav-link enabled" href="../Logout/Logout.php" id="IconKeluar">
+              <a class="nav-link enabled" href="#" id="IconKeluar">
                 <i class="fa fa-sign-out" aria-hidden="true"></i>
               </a>
+              <?php
+                echo '<script language="javascript">
+                    swal({
+                        title: "Peringatan",
+                        text: "Apakah Anda Yakin Ingin Keluar ?",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    }) .then((willDelete) => {
+                        if (willDelete) {
+                          { window.location ="../index.php"; }
+                        } else {
+                          { window.location ="../Dasbor/Dasbor.php"; }
+                        }
+                    });
+                  </script>';
+              ?>
             </div>
           </div>
         </div>
