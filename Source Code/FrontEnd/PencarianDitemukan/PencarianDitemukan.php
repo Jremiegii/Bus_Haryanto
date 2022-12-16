@@ -53,25 +53,7 @@
         <div id="Konten">
             <!-- Bagian Tabel Data -->
             <center>
-                <!-- Bagian Searching Data -->
-                <div class="row g-3 justify-content-center container-fluid">
-                    <!-- Bagian Input Peancarian Data -->
-                    <div class="col-6 col-sm-4">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" placeholder="Temukan" aria-label="Temukan" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                    <!-- Bagian Tombol Cari -->
-                    <div class="col-6 col-sm-2">
-                        <a href="#" class="btn btn-warning btn-lg" tabindex="-1" role="button" id="TombolCari">
-                            Cari
-                        </a>
-                    </div>
-                </div>
-
-                <br>
-
+                
                 <?php
 
                 include "../KoneksiDB.php";
@@ -80,8 +62,8 @@
                 $Tujuan = $_POST["Tujuan"];
                 $Waktu = $_POST["Waktu"];
                 $sql = "SELECT * FROM tiket_tujuan WHERE asal_keberangkatan = '$Asal' 
-                        and tujuan_keberangkatan = '$Tujuan' and waktu_operasional_bus = '$Waktu' 
-                        Order By waktu_operasional_bus Asc";
+                        and tujuan_keberangkatan = '$Tujuan' and waktu_operasional = '$Waktu' 
+                        Order By jam_operasional Asc";
                 $result = mysqli_query($conn, $sql);
                 $check = mysqli_num_rows($result);
                 if($check > 0){
@@ -101,7 +83,7 @@
                                     echo "</td>";
                                 echo "</div>";
                                 echo "<div class='col-4' id='LatarWaktu'>";
-                                    echo "<td><h4 id='Waktu'>" .$row['jam_keberangkatan_bus']. "</h4></td>";
+                                    echo "<td><h4 id='Waktu'>" .$row['jam_operasional']. "</h4></td>";
                                     echo "<td><h4 id='Waktu'>$Waktu</h4></td>";
                                 echo "</div>";
                             echo "</div>";

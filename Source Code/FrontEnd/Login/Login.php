@@ -87,7 +87,7 @@
             if(isset($_POST['Submit'])){
                 $User = $_POST["Username"];
                 $Password = $_POST["Password"];
-                $sql = "SELECT * FROM agen WHERE id_agen='$User' And kata_sandi='$Password'";
+                $sql = "SELECT * FROM agen WHERE id_agen='$User' And katasandi_agen='$Password'";
                 $result = mysqli_query($conn, $sql);
                 $check = mysqli_num_rows($result);
                 if($check > 0){
