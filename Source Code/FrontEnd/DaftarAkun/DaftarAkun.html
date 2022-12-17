@@ -33,14 +33,12 @@
             </nav>
         </div>
 
-        <br>
-
         <!-- Bagian Konten -->
         <div id="Konten">
-            <center>
-                <div id="Data">
-                    <div class="container-fluid">
-                        <form action="#" method="POST">
+            <div id="Data">
+                <div class="container-fluid">
+                    <center>
+                        <form action="InputDaftarAkun.php" method="POST">
                             <!-- Bagian Button Upload Profil -->
                             <div>
                                 <img src="../Img/Foto Profil.png" alt="Logo" width="100px" heigth="100px">
@@ -126,43 +124,10 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </center>
                 </div>
-            </center>
+            </div>
         </div>
-
-
-        <?php
-        
-            include "../KoneksiDB.php";
-
-            if(isset($_POST['daftar'])){
-                $nama = $_POST['namaAgen'];
-                $noTel = $_POST['noTelp'];
-                $email = $_POST['email'];
-                $alamat = $_POST['alamat'];
-                $id = $_POST['idPengguna'];
-                $sandi = $_POST['password'];
-                $confirmPassword = $_POST['confirmPassword'];
-    
-                $sql = "INSERT INTO agen (id_agen, no_perusahaan, nama_agen, no_telp_agen, alamat_agen, email_agen, katasandi_agen)
-                VALUES ('$id','36496062', '$nama', '$noTel', '$alamat', '$email', '$sandi')";
-
-                if($sandi == $confirmPassword){
-                    if($conn->query($sql) == TRUE){
-                        echo '<script language="javascript">swal("Berhasil!","Selamat Anda Telah Berhasil Mendaftar!","success").then(() => { window.location ="../Login/Login.php"; });</script>';
-                    } else {
-                        echo '<script language="javascript">swal("Opss!","Terjadi Kesalahan. Mohon Periksa Kembali!","error").then(() => { window.location ="DaftarAkun.php"; });</script>';
-                    }
-                } else {
-                    echo '<script language="javascript">swal("Opss!","Terjadi Kesalahan. Mohon Periksa Kembali!","error").then(() => { window.location ="DaftarAkun.php"; });</script>';
-                }
-            }
-
-            mysqli_close($conn);
-        
-        ?>
-
     </body>
 
 </html>

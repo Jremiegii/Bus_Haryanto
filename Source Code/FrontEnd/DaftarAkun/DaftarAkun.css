@@ -14,12 +14,6 @@ body{
     height:100vh;
 }
 
-/*h1{
-    font-weight: bold;
-    font-family: 'Merriweather', serif;
-}
-*/
-
 /* Bagian NavBar*/
 .navbar{
     background-color: white;
@@ -41,6 +35,8 @@ body{
 #Data{
     background-color: rgba(255, 255, 255, 0.52);
     border-radius: 10px;
+    height: 500px;
+    width: 1320px;
 }
 
 /* Bagian label/jdul input Nama, No Telepon, Email, Alamat, Id Pengguna, No Perusahaan, Kata Sandi & Konformasi Sandi*/

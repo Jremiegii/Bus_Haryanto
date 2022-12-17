@@ -13,12 +13,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;300&display=swap" rel="stylesheet">
         <!-- Import Icon dari Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Import SweetAlert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- File Style CSS -->
         <link rel="stylesheet" href="GantiSandi.css">
         <title>Ganti Kata Sandi</title>
     </head>
     <body>
-<form action="inputGantiSandi.php" method="POST">
+
         <!-- Bagian NavBar -->
         <div>
           <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -30,43 +32,66 @@
           </nav>
         </div>
 
-    <!-- Bagian Konten -->
+        <!-- Bagian Konten -->
 
-    <div id="Konten">
-        <!-- Bagian Input Perihal Kata Sandi-->
-        <center>
-            <div id="Data">
-                <h1 id="Judul">Ganti Sandi</h1>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" name="idPengguna" id="floatingPassword" placeholder="Pengguna">
-                    <label for="floatingPassword" id="KeteranganInput">
-                        <i class="fa fa-id-card" aria-hidden="true"></i> Pengguna
-                    </label>
-                </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="sandiLama" id="floatingPassword" placeholder="Kata Sandi Lama">
-                        <label for="floatingPassword" id="KeteranganInput">
-                            <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi Lama
+        <div id="Konten">
+            <!-- Bagian Input Perihal Kata Sandi-->
+            <center>
+                <div id="Data">
+                    <form action="#" method="POST">
+                        <h1 id="Judul">Ganti Sandi</h1>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="idPengguna" id="floatingPassword" placeholder="Pengguna">
+                            <label for="floatingPassword" id="KeteranganInput">
+                                <i class="fa fa-id-card" aria-hidden="true"></i> Pengguna
+                            </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="sandiBaru" id="floatingPassword" placeholder="Kata Sandi Baru">
+                            <label for="floatingPassword" id="KeteranganInput">
+                                <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi Baru
                         </label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="sandiBaru" id="floatingPassword" placeholder="Kata Sandi Baru">
-                        <label for="floatingPassword" id="KeteranganInput">
-                            <i class="fa fa-key" aria-hidden="true"></i> Kata Sandi Baru
-                    </label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="konfirmSandi" id="floatingPassword" placeholder="Konfirmasi Kata Sandi Baru">
-                        <label for="floatingPassword" id="KeteranganInput">
-                            <i class="fa fa-key" aria-hidden="true"></i> Konfirmasi Kata Sandi Baru
-                    </label>
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary" name="kirim" id="TombolSubmit">KIRIM</button>
-                    </div>
-            </div>
-        </center>
-    </div>
-</form>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" name="konfirmSandi" id="floatingPassword" placeholder="Konfirmasi Kata Sandi Baru">
+                            <label for="floatingPassword" id="KeteranganInput">
+                                <i class="fa fa-key" aria-hidden="true"></i> Konfirmasi Kata Sandi Baru
+                        </label>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary" name="kirim" id="TombolSubmit">KIRIM</button>
+                        </div>
+                    </form>
+                </div>
+            </center>
+        </div>
+
+
+        <?php
+        
+            include "../KoneksiDB.php";
+
+            if(isset($_POST['kirim'])){
+                $id = $_POST['idPengguna'];
+                $pwdBaru = $_POST['sandiBaru'];
+                $confirm = $_POST['konfirmSandi'];
+            
+                $sql = "UPDATE agen SET kata_sandi='$pwdBaru' WHERE id_agen='$id'";
+                
+                if($pwdBaru == $confirm){
+                    if($conn->query($sql) == TRUE){
+                        echo '<script language="javascript">swal("Berhasil!","Anda Telah Berhasil Mengubah Kata Sandi. Silahkan Login Kembali!","success").then(() => { window.location ="../Login/Login.php"; });</script>';
+                    } else {
+                        echo '<script language="javascript">swal("Opss!","Terjadi Kesalahan, Mohon Periksa Kembali!","error").then(() => { window.location ="GantiSandi.php"; });</script>';
+                    }
+                } else {
+                    echo '<script language="javascript">swal("Opss!","Terjadi Kesalahan, Mohon Periksa Kembali!","error").then(() => { window.location ="GantiSandi.php"; });</script>';
+                }
+            }
+            
+            mysqli_close($conn);
+        
+        ?>
+
     </body>
 </html>
