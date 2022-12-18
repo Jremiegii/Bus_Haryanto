@@ -1,0 +1,94 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Merriweather', serif;
+}
+
+/* Bagian Body */
+body{
+    background-image: url('../Img/Wayang.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #209CF2;
+    height:100vh;
+}
+
+/* Bagian NavBar*/
+.navbar{
+    background-color: #ffffff;
+}
+
+#navbarNav{
+    font-size: 30px;
+    color: #000000;
+    /*padding-left: 100px;*/
+    padding-right: 50px;
+    max-height: 70px;
+}
+
+.nav-link, .navbar-toggler-icon{
+    color: #000000;
+}
+
+.navbar-nav > .nav-item > .nav-link{
+    color: rgb(0, 0, 0);
+}
+
+/* Bagian Konten */
+
+#Konten{
+    /* Memberikan jarak antara navbar dengan isi konten */
+    padding-top: 7rem;
+    font-weight: bold; /* Mengatur tulisan agar cetak tebal atau bold */
+}
+
+/* Bagian Background Untuk From Ganti Sandi */
+#Data{
+    background-color: rgba(255, 255, 255, 0.52);
+    border-radius: 10px;
+    height: 450px;
+    width: 1200px;
+}
+
+/* Bagian label/judul input Nama, No Telepon, Email, Alamat, Id Pengguna, No Perusahaan, Kata Sandi & Konformasi Sandi*/
+#Nama, #JumlahTiket, #NoTelpon, #TotalHarga, #Bayar, #Kembalian{
+    width: 200px;
+    margin-top: 10px;
+}
+
+/* Bagian label/judul input Nama */
+#Nama, #Bayar{
+    margin-right: 340px;
+}
+
+/* Bagian label/judul input No telpon */
+#NoTelpon, #TotalHarga{
+    margin-right: 310px;
+}
+
+/* Bagian label/judul input Id Pengguna dan No Perusahaan */
+#JumlahTiket{
+    margin-right: 280px;
+}
+
+/* Bagian label/judul input Kata Sandi */
+#Kembalian{
+    margin-right: 300px;
+}
+
+/* Bagian Input Nama, No Telepon, Email, Alamat, Id Pengguna, No Perusahaan, Kata Sandi & Konformasi Sandi*/
+#InputNama, #InputNoTelpon, #InputJumTiket, #InputTotalHarga, 
+#InputBayar, #InputKembalian{
+    width: 400px;
+    border-radius:10px;
+}
+
+/* Bagian Tombol Kembali Dan Tombol Daftar */
+#TombolBayar{
+    background-color:  #ED1C24;
+    color: rgb(255, 255, 255);
+    width: 110px;
+    height: 45px;
+    border-radius: 10px;
+}
