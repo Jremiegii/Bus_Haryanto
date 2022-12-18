@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Import Framework Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Import Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,34 +19,35 @@
     <title>Laporan Pemesanan</title>
 </head>
 <style>
-    body {
-
-  }
-
-  th {
+th {
     padding-left: 40px;
     padding-right: 40px;
-    font-size: 20px;
+    font-size: 18px;
     background-color: #393E46;
     color: white;
-  }
+    text-align: left;
+}
 
 
-  td {
-    padding-left: 40px;
-    padding-right: 40px;
+td {
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 20px;
     background-color: #F3EFE0;
     text-align: center;
-  }
+}
 
-  th {
-    text-align:left;
-  }
 
-  table {
+table {
     border: 1px;
-  }
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#dell {
+    padding-right: 10px;
+    padding-left: 10px;
+}
 </style>
 
 
@@ -59,7 +61,8 @@
                 <a class="navbar-brand" href="../index.html" id="navbarNav">
                     <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -71,7 +74,8 @@
                             <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.html"> Tiket </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
+                            <a class="nav-link" aria-current="page"
+                                href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
                         </li>
                     </ul>
                 </div>
@@ -95,8 +99,10 @@
                 <!-- Bagian Input Peancarian Data -->
                 <div class="col-6 col-sm-4">
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Temukan" aria-label="Temukan" aria-describedby="basic-addon1">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search"
+                                aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="temukan" placeholder="Masukkan Id Penumpang"
+                            aria-label="Temukan" aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <!-- Bagian Tombol Cari -->
@@ -114,7 +120,7 @@
             $servername = "localhost";
             $username = "root";
             $password = "";
-            $dbname = "busharyanto";
+            $dbname = "busharyanto2";
 
             // Create connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -123,133 +129,252 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            $sql = "SELECT id_penumpang, nama_calon_penumpang, no_telpon FROM calon_penumpang";
+            $sql = "SELECT id_penumpang, nama_penumpang, no_telpon FROM calon_penumpang";
             $result = mysqli_query($conn, $sql);
-
-            if (mysqli_num_rows($result) > 0) {
-                echo "<table class='table'>";
-                echo "<table border='1'>";
-                echo "<th colspan='7'><center>DAFTAR CALON PENUMPANG</center></th>";
-
-                echo "<tr>";
-                echo "<th><b>Id Penumpang</b></th>";
-                echo "<th><b>Nama Penumpang</b></th>";
-                echo "<th><b>No Telpon</b></th>";
-                echo "<th><b>Input</b></th>";
-                echo "<th><b>Edit</b></th>";
-                echo "<th><b>Delete</b></th>";
-                echo "<th><b>Lihat</b></th>";
-                echo "</tr>";
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>";
-                    echo "<td>" . $row['id_penumpang'] . "</td>";
-                    echo "<td>" . $row['nama_calon_penumpang'] . "</td>";
-                    echo "<td>" . $row['no_telpon'] . "</td>";
-                    echo "<td><button type='button' class='btn btn-link'>Input</button></td>"; 
-                    echo "<td><button type='button' class='btn btn-link'>Edit</button></td>";
-                    echo "<td><button type='button' class='btn btn-link'>Delete</button></td>";
-                    echo "<td><button type='button' class='btn btn-link'>Lihat</button></td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
-            } else {
-                echo "0 results";
-            }
 
             mysqli_close($conn);
             ?>
 
+            <table class='table'>
+                <table border='1'>
+                    <th colspan='7'>
+                        <center>DAFTAR CALON PENUMPANG</center>
+                    </th>
+
+                    <tr>
+                        <th><b>Id Penumpang</b></th>
+                        <th><b>Nama Penumpang</b></th>
+                        <th><b>No Telpon</b></th>
+                        <th colspan='3'>
+                            <center><b>Action</b></center>
+                        </th>
+                        <!-- <th><b>Delete</b></th>
+                        <th><b>Lihat</b></th> -->
+                    </tr>
+                    <?php if (mysqli_num_rows($result) > 0) { ?>
+                    <?php foreach ($result as $value) { ?>
+                    <tr>
+                        <td><?= $value['id_penumpang']; ?></td>
+                        <td><?= $value['nama_penumpang']; ?></td>
+                        <td><?= $value['no_telpon']; ?></td>
+                        <td class="edit"><button type='submit' name='edit' class='btn btn-warning btn-sm'>Edit</button>
+                        </td>
+                        <td class="dell"><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#delete_<?= $value['id_penumpang']; ?>">Delete</button></td>
+                        <td class="lihat"><button type=" button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#lihat_<?= $value['id_penumpang']; ?>">Lihat</button></td>
+                    </tr>
+                    <?php } ?>
+                    <?php } ?>
+
+                </table>
+
+
+                <!-- untuk nampilin modal detail penumpang -->
+                <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "busharyanto2";
+
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $sql = "SELECT kode_penjualan, id_penumpang, kode_tujuan, kode_tiket, waktu_penjualan, biaya FROM data_penjualan";
+            $result = mysqli_query($conn, $sql);
+
+            mysqli_close($conn);
+            ?>
+                <?php foreach ($result as $dataModal) { ?>
+                <!-- Modal -->
+                <div class="modal fade" id="lihat_<?= $dataModal['id_penumpang']; ?>" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Penumpang</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <table class='table'>
+                                    <table border='0'>
+                                        <th colspan='7'>
+                                            <center>DAFTAR CALON PENUMPANG</center>
+                                        </th>
+                                        <center>
+                                            <tr>
+                                                <th>
+                                                    <b>Kode Penjualan</b>
+                                                </th>
+                                                <th>
+                                                    <b>Id Penumpang</b>
+                                                </th>
+
+                                                <th>
+                                                    <b>Kode Tujuan</b>
+                                                </th>
+                                                <th>
+                                                    <b>Kode Tiket</b>
+                                                </th>
+                                                <th>
+                                                    <b>Waktu Penjualan</b>
+                                                </th>
+                                                <th>
+                                                    <b>Biaya</b>
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <td><?= $dataModal['kode_penjualan']; ?></td>
+                                                <td><?= $dataModal['id_penumpang']; ?></td>
+                                                <td><?= $dataModal['kode_tujuan']; ?></td>
+                                                <td><?= $dataModal['kode_tiket']; ?></td>
+                                                <td><?= $dataModal['waktu_penjualan']; ?></td>
+                                                <td><?= $dataModal['biaya']; ?></td>
+                                            </tr>
+
+                                    </table>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Oke</button>
+                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+
+
+
+                <!-- untuk menghapus data -->
+                <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "busharyanto2";
+
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            
+            $sql = "SELECT id_penumpang FROM calon_penumpang";
+            $result = mysqli_query($conn, $sql);
+            mysqli_close($conn);
+            ?>
+
+                <?php foreach ($result as $dell) { ?>
+                <div class="modal fade" id="delete_<?= $dell['id_penumpang']; ?>" aria-hidden="true"
+                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">HAPUS</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Apakah Anda yakin akan menghapus data dari id = <?= $dell['id_penumpang']; ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                    data-bs-toggle="modal">Yakin</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+
+                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                    aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Konfirmasi Hapus</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Silahkan masukkan Id Penumpang kembali, untuk konfirmasi..
+                                <div class="modal-body">
+                                    <form action="hapus.php" method="POST">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-auto">
+                                                <label for="inputData" name="id_penumpang" class="col-form-label">Id
+                                                    Penumpang</label>
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="text" name="id_penumpang" id="inputData"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" name="dell" class="btn btn-danger"
+                                    data-bs-target="hapus.php">Ya</button>
+                                </form>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertically centered scrollable modal -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>
+                    
+                <?php 
+                
+                ?>
+                <!-- Modal -->
+                <div class="modal fade" id="edit_" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id leo in vitae turpis massa sed elementum. Duis at consectetur lorem donec massa sapien faucibus et molestie. Lectus urna duis convallis convallis tellus. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Ultrices mi tempus imperdiet nulla. Porttitor lacus luctus accumsan tortor posuere. Mollis aliquam ut porttitor leo a diam sollicitudin tempor id. Massa placerat duis ultricies lacus sed. Tristique magna sit amet purus gravida. In nibh mauris cursus mattis molestie a iaculis at erat.
+
+Lectus arcu bibendum at varius vel pharetra vel. Pellentesque habitant morbi tristique senectus et netus et malesuada. Purus sit amet volutpat consequat mauris nunc congue. Id neque aliquam vestibulum morbi blandit cursus. Diam maecenas sed enim ut sem viverra aliquet eget. Montes nascetur ridiculus mus mauris. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. At varius vel pharetra vel. Ut etiam sit amet nisl purus in mollis. Faucibus scelerisque eleifend donec pretium vulputate. Condimentum vitae sapien pellentesque habitant morbi tristique. Lectus mauris ultrices eros in cursus. Sem fringilla ut morbi tincidunt augue. Arcu cursus euismod quis viverra nibh. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Aenean et tortor at risus viverra adipiscing at. Sed id semper risus in hendrerit gravida rutrum quisque.
+
+Neque volutpat ac tincidunt vitae semper quis lectus. Pellentesque adipiscing commodo elit at imperdiet. Commodo nulla facilisi nullam vehicula ipsum a. Nec feugiat in fermentum posuere urna. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Eget duis at tellus at. Ipsum nunc aliquet bibendum enim facilisis. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Integer vitae justo eget magna fermentum iaculis eu non. Nunc lobortis mattis aliquam faucibus purus in massa tempor. Dolor sit amet consectetur adipiscing. Vel orci porta non pulvinar. Blandit turpis cursus in hac habitasse.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
 
-            <!-- 
-            Bagian Tabel Data
-            <div class="table-responsive" id="Data">
-                <table class="table">
-                    <!-- Bagian Header Table -->
-            <!-- <thead>
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Kode Tiket</th>
-                        <th scope="col"></th>
-                    </tr>
-                    </thead>
-                    <!-- Bagian Isi Tabel -->
-            <!-- <tbody id="DataPerBaris">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td scope="row">Sally</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td> -->
-            <!-- </tr>
-                    <tr id="DataPerBaris">
-                        <th scope="row">1</th>
-                        <td scope="row">Sally Clorinda</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr>
-                    <tr id="DataPerBaris">
-                        <th scope="row">1</th>
-                        <td scope="row">Jremiegi</td>
-                        <td scope="row">SG-101</td> -->
-            <!-- <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr>
-                    <tr id="DataPerBaris">
-                        <th scope="row">1</th>
-                        <td scope="row">Fransiskus Jremiegi S</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr>
-                    <tr id="DataPerBaris">
-                        <th scope="row">1</th>
-                        <td scope="row">Sally</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td scope="row">Sally</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr>
-                    <tr> -->
-            <!-- <th scope="row">1</th>
-                        <td scope="row">Sally</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td scope="row">Sally</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td scope="row">Sally</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td> -->
-            <!-- </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td scope="row">Sally</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td scope="row">Sally</td>
-                        <td scope="row">SG-101</td>
-                        <td scope="row"><a href="#"><i class="fa fa-eye" aria-hidden="true" id="IconMata"></i></a></td>
-                    </tr> -->
-            <!-- </tbody> -->
-            <!-- </table> -->
-            <!-- </div>  -->
+
         </center>
     </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
