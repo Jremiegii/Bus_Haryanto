@@ -41,9 +41,9 @@
                     <form action="#" method="POST">
                         <h1 id="Judul">Ganti Sandi</h1>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="idPengguna" id="floatingPassword" placeholder="Pengguna">
+                            <input type="text" class="form-control" name="idPengguna" id="floatingPassword" placeholder="Id Pengguna">
                             <label for="floatingPassword" id="KeteranganInput">
-                                <i class="fa fa-id-card" aria-hidden="true"></i> Pengguna
+                                <i class="fa fa-id-card" aria-hidden="true"></i> Id Pengguna
                             </label>
                         </div>
                         <div class="form-floating mb-3">
@@ -76,7 +76,7 @@
                 $pwdBaru = $_POST['sandiBaru'];
                 $confirm = $_POST['konfirmSandi'];
             
-                $sql = "UPDATE agen SET kata_sandi='$pwdBaru' WHERE id_agen='$id'";
+                $sql = "UPDATE agen SET katasandi_agen='$pwdBaru' WHERE id_agen='$id'";
                 
                 if($pwdBaru == $confirm){
                     if($conn->query($sql) == TRUE){

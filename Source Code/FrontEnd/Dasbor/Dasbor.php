@@ -45,7 +45,7 @@
               <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.php"> Tiket </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
+              <a class="nav-link" aria-current="page" href="../DaftarLaporanPemesanan/LaporanPemesanan.php"> Laporan </a>
             </li>
           </ul>
         </div>
@@ -95,7 +95,7 @@
                 <!-- Bagian Deskripsi -->
                 <h5>Bus Haryanto Kini Hadir Bersama Mu Mejelajahi Negeri!</h5>
                 <!-- Bagian Tombol Temukan Tiket -->
-                <a href="../CariTiket/CariTiket.html" class="btn btn-lg" tabindex="-1" role="button" id="TombolTiket">
+                <a href="../CariTiket/CariTiket.php" class="btn btn-lg" tabindex="-1" role="button" id="TombolTiket">
                   Temukan Tiket
                 </a>
               </div>

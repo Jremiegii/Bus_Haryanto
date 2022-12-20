@@ -77,7 +77,7 @@
                                 echo "<div class='col-5' id='LatarWaktu'>";
                                     echo "<td><h4 id='Waktu'>" .$row['harga_tiket']. "</h4></td>";
                                     echo "<td>";
-                                        echo "<a href='../KetersediaanTiket/KetersediaanTiket.html' class='btn btn-warning btn-lg' tabindex='-1' role='button' id='TombolBeli'>
+                                        echo "<a href='../DataPengguna/DataPengguna.php' class='btn btn-warning btn-lg' tabindex='-1' role='button' id='TombolBeli'>
                                         Beli
                                         </a>";
                                     echo "</td>";
@@ -88,6 +88,7 @@
                                 echo "</div>";
                             echo "</div>";
                         echo "</div>";
+                        echo "<br>";
                     }
                 } else {
                     echo("<script>window.location ='../PencarianTidakDitemukan/PencarianTidakDitemukan.php' </script>");

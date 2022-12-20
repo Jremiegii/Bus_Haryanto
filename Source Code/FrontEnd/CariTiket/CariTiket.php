@@ -34,13 +34,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.html"> Dasbor </a>
+                  <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.php"> Dasbor </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="CariTiket.html"> Tiket </a>
+                  <a class="nav-link" aria-current="page" href="CariTiket.php"> Tiket </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
+                    <a class="nav-link" aria-current="page" href="../DaftarLaporanPemesanan/LaporanPemesanan.php"> Laporan </a>
                 </li>
               </ul>
             </div>

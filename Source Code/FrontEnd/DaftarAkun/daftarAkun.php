@@ -112,7 +112,7 @@
                             <div class="row g-3">
                                 <!-- Bagian Button Kembali -->
                                 <div class="col">
-                                    <a href="../index.html" class="btn btn-warning btn-lg enable" role="button"
+                                    <a href="../index.php" class="btn btn-warning btn-lg enable" role="button"
                                         aria-disabled="true" id="TombolKembali">
                                         Kembali
                                     </a>

@@ -49,9 +49,9 @@
                     <h1 id="Judul">Login</h1>
                         <!-- Bagian Form Masukan Id Pengguna -->
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingPassword" placeholder="Pengguna" value="" name="Username">
+                            <input type="text" class="form-control" id="floatingPassword" placeholder="Id Pengguna" value="" name="Username">
                             <label for="floatingPassword" id="KeteranganInput">
-                                <i class="fa fa-key" aria-hidden="true"></i> Pengguna
+                                <i class="fa fa-key" aria-hidden="true"></i> Id Pengguna
                             </label>
                         </div>
                         <!-- Bagian Form Masukan Kata Sandi -->
@@ -68,10 +68,10 @@
                         <br><br><br><br>
                         <div>
                             <!-- Bagian Lupa Kata Sandi -->
-                            <a href="../GantiSandi/GantiSandi.html" id="LupaKataSandi">Lupa Kata Sandi?</a>
+                            <a href="../GantiSandi/GantiSandi.php" id="LupaKataSandi">Lupa Kata Sandi?</a>
                             <br>
                             <!-- Bagian Icon ganti Sandi Baru -->
-                            <a href="../DaftarAkun/daftarAkun.html" class="btn btn-warning btn-lg" tabindex="-1" role="button" id="DaftarAkun">
+                            <a href="../DaftarAkun/daftarAkun.php" class="btn btn-warning btn-lg" tabindex="-1" role="button" id="DaftarAkun">
                               Buat Akun Baru
                             </a>
                         </div>

@@ -42,7 +42,7 @@
                         <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.php"> Tiket </a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
+                        <a class="nav-link" aria-current="page" href="../DaftarLaporanPemesanan/LaporanPemesanan.php"> Laporan </a>
                         </li>
                     </ul>
                     </div>

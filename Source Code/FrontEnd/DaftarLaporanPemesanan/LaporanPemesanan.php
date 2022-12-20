@@ -68,14 +68,14 @@ table {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.html"> Dasbor </a>
+                            <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.php"> Dasbor </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.html"> Tiket </a>
+                            <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.php"> Tiket </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page"
-                                href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
+                                href="../DaftarLaporanPemesanan/LaporanPemesanan.php"> Laporan </a>
                         </li>
                     </ul>
                 </div>
@@ -119,19 +119,21 @@ table {
 
 
             <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "busharyanto2";
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $dbname = "busharyanto2";
 
-            // Create connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-            // Check connection
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
+            // // Create connection
+            // $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // // Check connection
+            // if (!$conn) {
+            //     die("Connection failed: " . mysqli_connect_error());
+            // }
 
-            $sql = "SELECT id_penumpang, nama_penumpang, no_telpon FROM calon_penumpang";
+            include "../KoneksiDB.php";
+
+            $sql = "SELECT id_penumpang, nama_penumpang, no_telp_penumpang FROM calon_penumpang";
             $result = mysqli_query($conn, $sql);
 
             mysqli_close($conn);
@@ -158,7 +160,7 @@ table {
                     <tr>
                         <td><?= $value['id_penumpang']; ?></td>
                         <td><?= $value['nama_penumpang']; ?></td>
-                        <td><?= $value['no_telpon']; ?></td>
+                        <td><?= $value['no_telp_penumpang']; ?></td>
                         <td class="edit"><button type='button' class='btn btn-warning btn-sm' data-bs-toggle="modal"
                                 data-bs-target="#edit_<?= $value['id_penumpang']; ?>">Edit</button>
                         </td>
@@ -175,17 +177,19 @@ table {
 
                 <!-- untuk nampilin modal detail penumpang -->
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "busharyanto2";
+                // $servername = "localhost";
+                // $username = "root";
+                // $password = "";
+                // $dbname = "busharyanto2";
 
-                // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
-                // Check connection
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
+                // // Create connection
+                // $conn = mysqli_connect($servername, $username, $password, $dbname);
+                // // Check connection
+                // if (!$conn) {
+                //     die("Connection failed: " . mysqli_connect_error());
+                // }
+
+                include "../KoneksiDB.php";
 
                 $sql = "SELECT kode_penjualan, id_penumpang, kode_tujuan, kode_tiket, waktu_penjualan, biaya FROM data_penjualan";
                 $result = mysqli_query($conn, $sql);
@@ -259,13 +263,15 @@ table {
 
                 <!-- untuk menghapus data -->
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "busharyanto2";
+                // $servername = "localhost";
+                // $username = "root";
+                // $password = "";
+                // $dbname = "busharyanto2";
 
-                // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
+                // // Create connection
+                // $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                include "../KoneksiDB.php";
 
                 $sql = "SELECT id_penumpang FROM calon_penumpang";
                 $result = mysqli_query($conn, $sql);
@@ -337,13 +343,15 @@ table {
                 <!-- Button trigger modal -->
 
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "busharyanto2";
+                // $servername = "localhost";
+                // $username = "root";
+                // $password = "";
+                // $dbname = "busharyanto2";
 
-                // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
+                // // Create connection
+                // $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                include "../KoneksiDB.php";
 
                 $sql = "SELECT id_penumpang FROM calon_penumpang";
                 $result = mysqli_query($conn, $sql);

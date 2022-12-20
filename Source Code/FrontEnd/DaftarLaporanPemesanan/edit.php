@@ -17,21 +17,24 @@
 <body>
     <?php if(isset($_POST['edit'])){ ?>
     <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "busharyanto2";
+                // $servername = "localhost";
+                // $username = "root";
+                // $password = "";
+                // $dbname = "busharyanto2";
 
-                // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
-                // Check connection
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
+                // // Create connection
+                // $conn = mysqli_connect($servername, $username, $password, $dbname);
+                // // Check connection
+                // if (!$conn) {
+                //     die("Connection failed: " . mysqli_connect_error());
+                // }
+                include "../KoneksiDB.php";
+
                 $id = $_POST['id_penumpang'];
                 $nama= $_POST['nama_penumpang'];
                 $no = $_POST['no_telpon'];
-                $sql = "UPDATE calon_penumpang SET nama_penumpang='$nama' WHERE id_penumpang='$id'";
+                $sql = "UPDATE calon_penumpang SET nama_penumpang='$nama', no_telp_penumpang='$no'
+                WHERE id_penumpang='$id'";
                 if (mysqli_query($conn, $sql)) {
                     echo "Record updated successfully";
                 } else {

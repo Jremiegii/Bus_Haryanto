@@ -80,9 +80,18 @@ body {
 }
 
 /* Bagian Tombol Krim */
-#TombolKrim{
+#TombolKrim, #TombolKembali{
     font-weight: bold;
     color:rgb(0, 0, 0);
     background-color: rgba(237, 28, 36, 0.8);
     margin-top: 20px;
+    width: 100px;
+}
+
+#TombolKrim{
+    margin-right: 110px;
+}
+
+#TombolKembali{
+    margin-left: 110px;
 }

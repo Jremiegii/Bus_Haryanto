@@ -1,17 +1,20 @@
 <?php
 function lihat()
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "busharyanto2";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "busharyanto2";
 
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    // // Create connection
+    // $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // // Check connection
+    // if (!$conn) {
+    //     die("Connection failed: " . mysqli_connect_error());
+    // }
+
+    include "../KoneksiDB.php";
+
     $id = $_POST['temukan'];
     $sql = "SELECT kode_penjualan, id_penumpang, kode_tujuan, kode_tiket, waktu_penjualan, biaya FROM data_penjualan WHERE id_penumpang = '$id'";
     $result = mysqli_query($conn, $sql);
