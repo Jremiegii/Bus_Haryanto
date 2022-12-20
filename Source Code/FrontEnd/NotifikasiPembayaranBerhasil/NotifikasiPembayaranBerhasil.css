@@ -16,24 +16,23 @@ body {
 }
 
 /* Bagian NavBar*/
-.navbar {
+.navbar{
   background-color: #ffffff;
 }
 
-#navbarNav {
+#navbarNav{
   font-size: 30px;
   color: #000000;
   /*padding-left: 100px;*/
   padding-right: 50px;
-    max-height: 70px;
+  max-height: 70px;
 }
 
-.nav-link,
-.navbar-toggler-icon {
+.nav-link, .navbar-toggler-icon{
   color: #000000;
 }
 
-.navbar-nav > .nav-item > .nav-link {
+.navbar-nav > .nav-item > .nav-link{
   color: rgb(0, 0, 0);
 }
 

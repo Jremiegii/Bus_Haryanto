@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- Import Google Font -->
-     <!-- Import Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;300&display=swap" rel="stylesheet">
@@ -62,6 +61,10 @@
           <h1 id="Judul">Data Pengguna</h1>
           <br>
           <div class="row">
+          <div class="mb-3">
+              <label for="Nama" class="form-label" id="JumlahTiket" disable>Id Pengguna</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pengguna" name="IdPengguna" disable>
+            </div>
             <div class="mb-3">
               <label for="Nama" class="form-label" id="JumlahTiket">Nama</label>
               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama" name="Nama">
@@ -69,10 +72,6 @@
             <div class="mb-3">
               <label for="No Telpon" class="form-label" id="NoTelpon">No Telpon</label>
               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="No Telpon" name="NoTelpon">
-            </div>
-            <div class="mb-3">
-              <label for="Nama" class="form-label" id="JumlahTiket" disable>Id Pengguna</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pengguna" name="IdPengguna" disable>
             </div>
             <!-- Bagian Tombol Krim -->
             <div class="col">
@@ -96,7 +95,7 @@
         $Nama = $_POST['Nama'];
         $NoTelpon = $_POST['NoTelpon'];
     
-        $sql = "INSERT INTO calon_penumpang ('Id_Penumpang', nama_penumpang, no_telp_penumpang)
+        $sql = "INSERT INTO calon_penumpang (Id_Penumpang, nama_penumpang, no_telp_penumpang)
         VALUES ('$IdPengguna', '$Nama', '$NoTelpon')";
 
         if($conn->query($sql) == TRUE){
@@ -110,7 +109,7 @@
                         dangerMode: true,
                     }) .then((willDelete) => {
                         if (willDelete) {
-                          { window.location ="..NotifikasiPembayaranBerhasil/NotifikasiPembayaranBerhasilhtml"; }
+                          { window.location ="../NotifikasiPembayaranBerhasil/NotifikasiPembayaranBerhasil.php"; }
                         } else {
                           { window.location ="../DataPengguna/DataPengguna.php"; }
                         }

@@ -34,13 +34,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.html"> Dasbor </a>
+                        <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.php"> Dasbor </a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.html"> Tiket </a>
+                    <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.php"> Tiket </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
+                        <a class="nav-link" aria-current="page" href="../DaftarLaporanPemesanan/LaporanPemesanan.php"> Laporan </a>
                     </li>
                 </ul>
                 </div>
@@ -78,7 +78,7 @@
                                     echo "<td><h4 id='Waktu'>" .$row['harga_tiket']. "</h4></td>";
                                     echo "<td>";
                                         echo "<a href='../DataPengguna/DataPengguna.php' class='btn btn-warning btn-lg' tabindex='-1' role='button' id='TombolBeli'>
-                                        Beli
+                                            Beli
                                         </a>";
                                     echo "</td>";
                                 echo "</div>";
