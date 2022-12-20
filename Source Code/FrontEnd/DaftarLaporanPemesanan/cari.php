@@ -51,17 +51,19 @@ function lihat()
 
 function delete()
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "busharyanto2";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "busharyanto2";
 
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    // // Create connection
+    // $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // // Check connection
+    // if (!$conn) {
+    //     die("Connection failed: " . mysqli_connect_error());
+    // }
+
+    include "../KoneksiDB.php";
 
     // sql to delete a record
     $sql = "DELETE FROM calon_penumpang WHERE id=3";
@@ -129,6 +131,7 @@ function delete()
     <?php
     include"../KoneksiDB.php";
 
+    
     $id = $_POST['cari_id'];
     $cari = "SELECT * FROM calon_penumpang WHERE nama_penumpang LIKE '$id%'";
 
@@ -166,11 +169,6 @@ function delete()
         <?php }else{ ?>
             
             echo '<script language="javascript">swal("Opss!","Data Anda tidak ditemukan, Mohon Periksa Kembali!","error").then(() => { window.location ="../DaftarLaporanPemesanan/LaporanPemesanan.php"; });</script>'
-    <?php } ?>
-
-    
-    <?php } ?>
-    <?php mysqli_close($conn); ?> 
     <?php } ?>
     <?php } ?>
 
