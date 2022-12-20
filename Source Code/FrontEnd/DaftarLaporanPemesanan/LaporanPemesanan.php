@@ -60,7 +60,7 @@ table {
     <div>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html" id="navbarNav">
+                <a class="navbar-brand" href="../index.php" id="navbarNav">
                     <img src="../Img/Logo.png" alt="Logo" width="200px" heigth="200px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -70,14 +70,14 @@ table {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.html"> Dasbor </a>
+                            <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.php"> Dasbor </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.html"> Tiket </a>
+                            <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.php"> Tiket </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page"
-                                href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
+                                href="../DaftarLaporanPemesanan/LaporanPemesanan.php"> Laporan </a>
                         </li>
                     </ul>
                 </div>
@@ -97,24 +97,24 @@ table {
         <!-- Bagian Tabel Data -->
         <center>
             <!-- Bagian Searching Data -->
-
-
+          
+           
             <form action="cari.php" method="POST">
-                <div class="row g-3 justify-content-center container-fluid">
-                    <!-- Bagian Input Peancarian Data -->
-                    <div class="col-6 col-sm-4">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search"
-                                    aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="cari_id" placeholder="Masukkan Nama Penumpang"
-                                aria-label="Temukan" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                    <!-- Bagian Tombol Cari -->
-                    <div class="col-6 col-sm-2">
-                        <button type="submit" name="cari" class="btn btn-warning btn-lg" tabindex="-1">Cari</button>
+            <div class="row g-3 justify-content-center container-fluid">
+                <!-- Bagian Input Peancarian Data -->
+                <div class="col-6 col-sm-4">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search"
+                                aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="cari_id" placeholder="Masukkan Nama Penumpang"
+                            aria-label="Temukan" aria-describedby="basic-addon1">
                     </div>
                 </div>
+                <!-- Bagian Tombol Cari -->
+                <div class="col-6 col-sm-2">
+                    <button type="submit" name="cari" class="btn btn-warning btn-lg" tabindex="-1">Cari</button>
+                </div>
+            </div>
             </form>
 
             <br>
@@ -127,7 +127,6 @@ table {
             $result = mysqli_query($conn, $sql);
 
             mysqli_close($conn);
-            
             ?>
 
             <table class='table'>
@@ -314,11 +313,11 @@ table {
                 $result = mysqli_query($conn, $sql);
                 mysqli_close($conn);
                 ?>
-
+                
                 <?php foreach ($result as $edit) { ?>
                 <!-- Modal -->
-                <div class="modal fade" id="edit_<?= $edit['id_penumpang']; ?>" tabindex="-1"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="edit_<?= $edit['id_penumpang']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -350,18 +349,17 @@ table {
                                         <input type="text" name="no_telpon" id="inputNo" class="form-control">
 
                                     </div>
-
+                                
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" name="edit" class="btn btn-success"
-                                    data-bs-target="edit.php">Edit</button>
+                                <button type="submit" name="edit" class="btn btn-success" data-bs-target="edit.php">Edit</button>
                             </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <?php } ?>
+                    <?php } ?>
 
 
 
@@ -377,11 +375,10 @@ table {
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
 
 <?php if(isset($_POST['edit'])){ ?>
-<?php
+    <?php
                 include"../KoneksiDB.php";
                 $id = $_POST['id_penumpang'];
                 $nama= $_POST['nama_penumpang'];
@@ -397,4 +394,4 @@ table {
 
                 mysqli_close($conn);
                 ?>
-<?php } ?>
+    <?php } ?>
