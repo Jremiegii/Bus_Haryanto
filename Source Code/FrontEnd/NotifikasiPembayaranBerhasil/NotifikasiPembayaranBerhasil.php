@@ -63,7 +63,7 @@
             <!-- Bagian Untuk Background Pada Narasi(Ukuran Background Yang Kecil) -->
             <!-- Bagian Deskripsi Tentang Notifikasi Pembayaran Tiket -->
             <p class="text-center fs-3" id="Narasi">
-              Terimakasih Anda telah sukses melakukan pembayaran.
+              Terimakasih Anda telah sukses melakukan Pemesanan Tiket.
               <br>
               <!-- Bagian Icon Sukses -->
               <i class="fa fa-check-circle-o" aria-hidden="true" id="IconSukses">
@@ -79,20 +79,16 @@
               </a>
             </div>
             <!-- Bagian Button Cetak Struk -->
-            <div class="col">
+            <!-- <div class="col">
               <a href="#" class="btn btn-warning btn-lg enable" tabindex="-1" role="button" aria-disabled="true"
                 id="TombolCetak" name="Cetak">
                 Cetak Struk
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
       </form>
     </center>
   </div>
-
-  
-
 </body>
-
 </html>

@@ -54,17 +54,19 @@ function lihat()
 
 function delete()
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "busharyanto2";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "busharyanto2";
 
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    // // Create connection
+    // $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // // Check connection
+    // if (!$conn) {
+    //     die("Connection failed: " . mysqli_connect_error());
+    // }
+
+    include "../KoneksiDB.php";
 
     // sql to delete a record
     $sql = "DELETE FROM calon_penumpang WHERE id=3";
@@ -130,17 +132,18 @@ function delete()
 <body>
     <?php if(isset($_POST['cari'])){ ?>
     <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "busharyanto2";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "busharyanto2";
 
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    // // Create connection
+    // $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // // Check connection
+    // if (!$conn) {
+    //     die("Connection failed: " . mysqli_connect_error());
+    // }
+    include "../KoneksiDB.php";
 
     $id = $_POST['cari_id'];
     $cari = "SELECT * FROM calon_penumpang WHERE nama_penumpang LIKE '$id%'";
@@ -151,8 +154,7 @@ function delete()
     if (mysqli_num_rows($result) > 0) {
         // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
-            
-            echo "id: " . $row["id_penumpang"] . " - Name: " . $row["nama_penumpang"] . "No Telpon " . $row["no_telpon"] . "<br>";
+            echo "id: " . $row["id_penumpang"] . " - Name: " . $row["nama_penumpang"] . "No Telpon " . $row["no_telp_penumpang"] . "<br>";
         }
     } else {
         echo "0 results";
