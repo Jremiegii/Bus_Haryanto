@@ -95,23 +95,25 @@ table {
         <!-- Bagian Tabel Data -->
         <center>
             <!-- Bagian Searching Data -->
+          
+           
+            <form action="cari.php" method="POST">
             <div class="row g-3 justify-content-center container-fluid">
                 <!-- Bagian Input Peancarian Data -->
                 <div class="col-6 col-sm-4">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search"
                                 aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" name="temukan" placeholder="Masukkan Id Penumpang"
+                        <input type="text" class="form-control" name="cari_id" placeholder="Masukkan Nama Penumpang"
                             aria-label="Temukan" aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <!-- Bagian Tombol Cari -->
                 <div class="col-6 col-sm-2">
-                    <a href="#" class="btn btn-warning btn-lg" tabindex="-1" role="button" id="TombolCari">
-                        Cari
-                    </a>
+                    <button type="submit" name="cari" class="btn btn-warning btn-lg" tabindex="-1">Cari</button>
                 </div>
             </div>
+            </form>
 
             <br>
 
@@ -157,7 +159,8 @@ table {
                         <td><?= $value['id_penumpang']; ?></td>
                         <td><?= $value['nama_penumpang']; ?></td>
                         <td><?= $value['no_telpon']; ?></td>
-                        <td class="edit"><button type='submit' name='edit' class='btn btn-warning btn-sm'>Edit</button>
+                        <td class="edit"><button type='button' class='btn btn-warning btn-sm' data-bs-toggle="modal"
+                                data-bs-target="#edit_<?= $value['id_penumpang']; ?>">Edit</button>
                         </td>
                         <td class="dell"><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#delete_<?= $value['id_penumpang']; ?>">Delete</button></td>
@@ -172,23 +175,23 @@ table {
 
                 <!-- untuk nampilin modal detail penumpang -->
                 <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "busharyanto2";
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "busharyanto2";
 
-            // Create connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-            // Check connection
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
+                // Check connection
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
 
-            $sql = "SELECT kode_penjualan, id_penumpang, kode_tujuan, kode_tiket, waktu_penjualan, biaya FROM data_penjualan";
-            $result = mysqli_query($conn, $sql);
+                $sql = "SELECT kode_penjualan, id_penumpang, kode_tujuan, kode_tiket, waktu_penjualan, biaya FROM data_penjualan";
+                $result = mysqli_query($conn, $sql);
 
-            mysqli_close($conn);
-            ?>
+                mysqli_close($conn);
+                ?>
                 <?php foreach ($result as $dataModal) { ?>
                 <!-- Modal -->
                 <div class="modal fade" id="lihat_<?= $dataModal['id_penumpang']; ?>" tabindex="-1"
@@ -256,18 +259,18 @@ table {
 
                 <!-- untuk menghapus data -->
                 <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "busharyanto2";
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "busharyanto2";
 
-            // Create connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-            
-            $sql = "SELECT id_penumpang FROM calon_penumpang";
-            $result = mysqli_query($conn, $sql);
-            mysqli_close($conn);
-            ?>
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                $sql = "SELECT id_penumpang FROM calon_penumpang";
+                $result = mysqli_query($conn, $sql);
+                mysqli_close($conn);
+                ?>
 
                 <?php foreach ($result as $dell) { ?>
                 <div class="modal fade" id="delete_<?= $dell['id_penumpang']; ?>" aria-hidden="true"
@@ -327,40 +330,72 @@ table {
                     </div>
                 </div>
 
+
+
+
                 <!-- Vertically centered scrollable modal -->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                </button>
-                    
-                <?php 
-                
+
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "busharyanto2";
+
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                $sql = "SELECT id_penumpang FROM calon_penumpang";
+                $result = mysqli_query($conn, $sql);
+                mysqli_close($conn);
                 ?>
+                
+                <?php foreach ($result as $edit) { ?>
                 <!-- Modal -->
-                <div class="modal fade" id="edit_" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="edit_<?= $edit['id_penumpang']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id leo in vitae turpis massa sed elementum. Duis at consectetur lorem donec massa sapien faucibus et molestie. Lectus urna duis convallis convallis tellus. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Ultrices mi tempus imperdiet nulla. Porttitor lacus luctus accumsan tortor posuere. Mollis aliquam ut porttitor leo a diam sollicitudin tempor id. Massa placerat duis ultricies lacus sed. Tristique magna sit amet purus gravida. In nibh mauris cursus mattis molestie a iaculis at erat.
+                                <form action="edit.php" method="POST">
+                                    <div class="mb-3">
+                                        <label for="inputId" class="form-label">Masukkan Id
+                                            Penumpang</label>
 
-Lectus arcu bibendum at varius vel pharetra vel. Pellentesque habitant morbi tristique senectus et netus et malesuada. Purus sit amet volutpat consequat mauris nunc congue. Id neque aliquam vestibulum morbi blandit cursus. Diam maecenas sed enim ut sem viverra aliquet eget. Montes nascetur ridiculus mus mauris. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. At varius vel pharetra vel. Ut etiam sit amet nisl purus in mollis. Faucibus scelerisque eleifend donec pretium vulputate. Condimentum vitae sapien pellentesque habitant morbi tristique. Lectus mauris ultrices eros in cursus. Sem fringilla ut morbi tincidunt augue. Arcu cursus euismod quis viverra nibh. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Aenean et tortor at risus viverra adipiscing at. Sed id semper risus in hendrerit gravida rutrum quisque.
+                                        <input type="text" name="id_penumpang" id="inputId" class="form-control">
 
-Neque volutpat ac tincidunt vitae semper quis lectus. Pellentesque adipiscing commodo elit at imperdiet. Commodo nulla facilisi nullam vehicula ipsum a. Nec feugiat in fermentum posuere urna. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Eget duis at tellus at. Ipsum nunc aliquet bibendum enim facilisis. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Integer vitae justo eget magna fermentum iaculis eu non. Nunc lobortis mattis aliquam faucibus purus in massa tempor. Dolor sit amet consectetur adipiscing. Vel orci porta non pulvinar. Blandit turpis cursus in hac habitasse.
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inputNama" class="form-label">Masukkan Nama
+                                            Penumpang</label>
+
+                                        <input type="text" name="nama_penumpang" id="inputNama" class="form-control">
+
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="inputNo" class="form-label">Masukkan No
+                                            Telpon</label>
+
+                                        <input type="text" name="no_telpon" id="inputNo" class="form-control">
+
+                                    </div>
+                                
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="submit" name="edit" class="btn btn-success" data-bs-target="edit.php">Edit</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-
+                    <?php } ?>
 
 
 
