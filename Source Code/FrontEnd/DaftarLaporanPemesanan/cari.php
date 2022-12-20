@@ -1,20 +1,17 @@
 <?php
 function lihat()
 {
-    // $servername = "localhost";
-    // $username = "root";
-    // $password = "";
-    // $dbname = "busharyanto2";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "busharyanto2";
 
-    // // Create connection
-    // $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // // Check connection
-    // if (!$conn) {
-    //     die("Connection failed: " . mysqli_connect_error());
-    // }
-
-    include "../KoneksiDB.php";
-
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
     $id = $_POST['temukan'];
     $sql = "SELECT kode_penjualan, id_penumpang, kode_tujuan, kode_tiket, waktu_penjualan, biaya FROM data_penjualan WHERE id_penumpang = '$id'";
     $result = mysqli_query($conn, $sql);
@@ -130,36 +127,51 @@ function delete()
 <body>
     <?php if(isset($_POST['cari'])){ ?>
     <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "busharyanto2";
-
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    include"../KoneksiDB.php";
 
     $id = $_POST['cari_id'];
     $cari = "SELECT * FROM calon_penumpang WHERE nama_penumpang LIKE '$id%'";
 
     $result = mysqli_query($conn, $cari);
+?>
+    
+   <?php if (mysqli_num_rows($result) > 0) { ?> 
+       
+       <?php  while ($row = mysqli_fetch_assoc($result)) { ?>
+            <?php include"../KoneksiDB.php"; ?> 
+           <?php $sql = "SELECT id_penumpang, nama_penumpang, no_telpon FROM calon_penumpang WHERE nama_penumpang LIKE '$id%'" ; ?> 
+           <?php  $result = mysqli_query($conn, $sql); ?>
+            <table class='table'>
+                <table border='1'>
+                    <th colspan='3'>
+                    </th>
+
+                    <tr>
+                        <th><b>Id Penumpang</b></th>
+                        <th><b>Nama Penumpang</b></th>
+                        <th><b>No Telpon</b></th>
+                        <!-- <th><b>Delete</b></th>
+                        <th><b>Lihat</b></th> -->
+                    </tr>
+                    <?php if (mysqli_num_rows($result) > 0) { ?>
+                    <?php foreach ($result as $value) { ?>
+                    <tr>
+                        <td><?= $value['id_penumpang']; ?></td>
+                        <td><?= $value['nama_penumpang']; ?></td>
+                        <td><?= $value['no_telpon']; ?></td>
+                    </tr>
+            
+        <?php } ?>
+       
+        <?php }else{ ?>
+            
+            echo '<script language="javascript">swal("Opss!","Data Anda tidak ditemukan, Mohon Periksa Kembali!","error").then(() => { window.location ="../DaftarLaporanPemesanan/LaporanPemesanan.php"; });</script>'
+    <?php } ?>
 
     
-    if (mysqli_num_rows($result) > 0) {
-        // output data of each row
-        while ($row = mysqli_fetch_assoc($result)) {
-            
-            echo "id: " . $row["id_penumpang"] . " - Name: " . $row["nama_penumpang"] . "No Telpon " . $row["no_telpon"] . "<br>";
-        }
-    } else {
-        echo "0 results";
-    }
-
-    mysqli_close($conn);
-    ?>
+    <?php } ?>
+    <?php mysqli_close($conn); ?> 
+    <?php } ?>
     <?php } ?>
 
 

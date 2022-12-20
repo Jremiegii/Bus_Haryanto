@@ -6,37 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hapus</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
     <?php
-      if(isset($_POST['dell'])){
-      // $servername = "localhost";
-      // $username = "root";
-      // $password = "";
-      // $dbname = "busharyanto2";
+if(isset($_POST['dell'])){
+  include"../KoneksiDB.php";
 
-      // // Create connection
-      // $conn = mysqli_connect($servername, $username, $password, $dbname);
-      // // Check connection
-      // if (!$conn){
-      //     die("Connection failed: " . mysqli_connect_error());
-      // }
+// sql to delete a record
+$id = $_POST['id_penumpang'];
+$sql = "DELETE FROM calon_penumpang WHERE id_penumpang='$id'";
 
-      include "../KoneksiDB.php";
+if (mysqli_query($conn, $sql)) {
+  echo '<script language="javascript">swal("Berhasil Hapus!","","success").then(() => { window.location ="../DaftarLaporanPemesanan/LaporanPemesanan.php"; });</script>';
+} else {
+  echo '<script language="javascript">swal("Opss!","Data Anda belum berhasil terhapus, Mohon Periksa Kembali!","error").then(() => { window.location ="../DaftarLaporanPemesanan/LaporanPemesanan.php"; });</script>' . mysqli_error($conn);
+}
 
-      // sql to delete a record
-      $id = $_POST['id_penumpang'];
-      $sql = "DELETE FROM calon_penumpang WHERE id_penumpang='$id'";
-
-      if (mysqli_query($conn, $sql)) {
-        echo "Record deleted successfully";
-      } else {
-        echo "Error deleting record: " . mysqli_error($conn);
-      }
-
-      mysqli_close($conn);
-      }
+mysqli_close($conn);
+}
 ?>
 </body>
 

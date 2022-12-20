@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- File Style CSS -->
     <link rel="stylesheet" href="LaporanPemesanan.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Laporan Pemesanan</title>
 </head>
 <style>
@@ -68,14 +70,14 @@ table {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.php"> Dasbor </a>
+                            <a class="nav-link" aria-current="page" href="../Dasbor/Dasbor.html"> Dasbor </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.php"> Tiket </a>
+                            <a class="nav-link" aria-current="page" href="../CariTiket/CariTiket.html"> Tiket </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page"
-                                href="../DaftarLaporanPemesanan/LaporanPemesanan.php"> Laporan </a>
+                                href="../DaftarRiwayatLaporan/DaftarRiwayatLaporan.html"> Laporan </a>
                         </li>
                     </ul>
                 </div>
@@ -119,21 +121,9 @@ table {
 
 
             <?php
-            // $servername = "localhost";
-            // $username = "root";
-            // $password = "";
-            // $dbname = "busharyanto2";
+             include"../KoneksiDB.php";
 
-            // // Create connection
-            // $conn = mysqli_connect($servername, $username, $password, $dbname);
-            // // Check connection
-            // if (!$conn) {
-            //     die("Connection failed: " . mysqli_connect_error());
-            // }
-
-            include "../KoneksiDB.php";
-
-            $sql = "SELECT id_penumpang, nama_penumpang, no_telp_penumpang FROM calon_penumpang";
+            $sql = "SELECT id_penumpang, nama_penumpang, no_telpon FROM calon_penumpang";
             $result = mysqli_query($conn, $sql);
 
             mysqli_close($conn);
@@ -142,7 +132,6 @@ table {
             <table class='table'>
                 <table border='1'>
                     <th colspan='7'>
-                        <center>DAFTAR CALON PENUMPANG</center>
                     </th>
 
                     <tr>
@@ -160,7 +149,7 @@ table {
                     <tr>
                         <td><?= $value['id_penumpang']; ?></td>
                         <td><?= $value['nama_penumpang']; ?></td>
-                        <td><?= $value['no_telp_penumpang']; ?></td>
+                        <td><?= $value['no_telpon']; ?></td>
                         <td class="edit"><button type='button' class='btn btn-warning btn-sm' data-bs-toggle="modal"
                                 data-bs-target="#edit_<?= $value['id_penumpang']; ?>">Edit</button>
                         </td>
@@ -177,21 +166,9 @@ table {
 
                 <!-- untuk nampilin modal detail penumpang -->
                 <?php
-                // $servername = "localhost";
-                // $username = "root";
-                // $password = "";
-                // $dbname = "busharyanto2";
+                 include"../KoneksiDB.php";
 
-                // // Create connection
-                // $conn = mysqli_connect($servername, $username, $password, $dbname);
-                // // Check connection
-                // if (!$conn) {
-                //     die("Connection failed: " . mysqli_connect_error());
-                // }
-
-                include "../KoneksiDB.php";
-
-                $sql = "SELECT kode_penjualan, id_penumpang, kode_tujuan, kode_tiket, waktu_penjualan, biaya FROM data_penjualan";
+                $sql = "SELECT kode_penjualan, id_penumpang, kode_tujuan, waktu_penjualan, biaya FROM data_penjualan";
                 $result = mysqli_query($conn, $sql);
 
                 mysqli_close($conn);
@@ -226,9 +203,7 @@ table {
                                                 <th>
                                                     <b>Kode Tujuan</b>
                                                 </th>
-                                                <th>
-                                                    <b>Kode Tiket</b>
-                                                </th>
+
                                                 <th>
                                                     <b>Waktu Penjualan</b>
                                                 </th>
@@ -241,7 +216,6 @@ table {
                                                 <td><?= $dataModal['kode_penjualan']; ?></td>
                                                 <td><?= $dataModal['id_penumpang']; ?></td>
                                                 <td><?= $dataModal['kode_tujuan']; ?></td>
-                                                <td><?= $dataModal['kode_tiket']; ?></td>
                                                 <td><?= $dataModal['waktu_penjualan']; ?></td>
                                                 <td><?= $dataModal['biaya']; ?></td>
                                             </tr>
@@ -263,16 +237,7 @@ table {
 
                 <!-- untuk menghapus data -->
                 <?php
-                // $servername = "localhost";
-                // $username = "root";
-                // $password = "";
-                // $dbname = "busharyanto2";
-
-                // // Create connection
-                // $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-                include "../KoneksiDB.php";
-
+                 include"../KoneksiDB.php";
                 $sql = "SELECT id_penumpang FROM calon_penumpang";
                 $result = mysqli_query($conn, $sql);
                 mysqli_close($conn);
@@ -343,16 +308,7 @@ table {
                 <!-- Button trigger modal -->
 
                 <?php
-                // $servername = "localhost";
-                // $username = "root";
-                // $password = "";
-                // $dbname = "busharyanto2";
-
-                // // Create connection
-                // $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-                include "../KoneksiDB.php";
-
+                 include"../KoneksiDB.php";
                 $sql = "SELECT id_penumpang FROM calon_penumpang";
                 $result = mysqli_query($conn, $sql);
                 mysqli_close($conn);
@@ -370,7 +326,7 @@ table {
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form action="edit.php" method="POST">
+                                <form action="" method="POST">
                                     <div class="mb-3">
                                         <label for="inputId" class="form-label">Masukkan Id
                                             Penumpang</label>
@@ -419,5 +375,23 @@ table {
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
+
+<?php if(isset($_POST['edit'])){ ?>
+    <?php
+                include"../KoneksiDB.php";
+                $id = $_POST['id_penumpang'];
+                $nama= $_POST['nama_penumpang'];
+                $no = $_POST['no_telpon'];
+
+                $sql = "UPDATE calon_penumpang SET nama_penumpang='$nama', no_telpon='$no'
+                WHERE id_penumpang='$id'";
+                if (mysqli_query($conn, $sql)) {
+                    echo '<script language="javascript">swal("Berhasil Edit!","","success").then(() => { window.location ="../DaftarLaporanPemesanan/LaporanPemesanan.php"; });</script>';
+                } else {
+                    echo '<script language="javascript">swal("Opss!","Data Anda belum berhasil terubah, Mohon Periksa Kembali!","error").then(() => { window.location ="../DaftarLaporanPemesanan/LaporanPemesanan.php"; });</script>' . mysqli_error($conn);
+                }
+
+                mysqli_close($conn);
+                ?>
+    <?php } ?>
