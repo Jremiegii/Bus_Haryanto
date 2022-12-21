@@ -68,11 +68,6 @@ body {
     margin-right: 265px;
 }
 
-/* /* Bagian label/judul input Jumlah Tiket & Posisi Duduk */
-#JumlahTiket, #PosisiDuduk{
-    margin-right: 245px;
-}
-
 /* Bagian Input Nama, No Telpon, Jumlah Tiket & Posisi Duduk */
 .form-control{
     height: 40px;

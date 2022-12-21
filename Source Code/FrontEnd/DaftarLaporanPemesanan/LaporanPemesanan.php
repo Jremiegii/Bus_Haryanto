@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;300&display=swap" rel="stylesheet">
     <!-- Import Icon dari Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Import SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- File Style CSS -->
     <link rel="stylesheet" href="LaporanPemesanan.css">
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Laporan Pemesanan</title>
 </head>
 <style>
@@ -112,7 +112,7 @@ table {
                 </div>
                 <!-- Bagian Tombol Cari -->
                 <div class="col-6 col-sm-2">
-                    <button type="submit" name="cari" class="btn btn-warning btn-lg" tabindex="-1">Cari</button>
+                    <button type="submit" name="cari" class="btn btn-warning btn-lg" id="TombolCari" tabindex="-1">Cari</button>
                 </div>
             </div>
             </form>
@@ -123,7 +123,7 @@ table {
             <?php
              include"../KoneksiDB.php";
 
-            $sql = "SELECT id_penumpang, nama_penumpang, no_telpon FROM calon_penumpang";
+            $sql = "SELECT id_penumpang, nama_penumpang, no_telp_penumpang FROM calon_penumpang";
             $result = mysqli_query($conn, $sql);
 
             mysqli_close($conn);
@@ -149,7 +149,7 @@ table {
                     <tr>
                         <td><?= $value['id_penumpang']; ?></td>
                         <td><?= $value['nama_penumpang']; ?></td>
-                        <td><?= $value['no_telpon']; ?></td>
+                        <td><?= $value['no_telp_penumpang']; ?></td>
                         <td class="edit"><button type='button' class='btn btn-warning btn-sm' data-bs-toggle="modal"
                                 data-bs-target="#edit_<?= $value['id_penumpang']; ?>">Edit</button>
                         </td>
@@ -237,7 +237,7 @@ table {
 
                 <!-- untuk menghapus data -->
                 <?php
-                 include"../KoneksiDB.php";
+                include"../KoneksiDB.php";
                 $sql = "SELECT id_penumpang FROM calon_penumpang";
                 $result = mysqli_query($conn, $sql);
                 mysqli_close($conn);
@@ -384,7 +384,7 @@ table {
                 $nama= $_POST['nama_penumpang'];
                 $no = $_POST['no_telpon'];
 
-                $sql = "UPDATE calon_penumpang SET nama_penumpang='$nama', no_telpon='$no'
+                $sql = "UPDATE calon_penumpang SET nama_penumpang='$nama', no_telp_penumpang='$no'
                 WHERE id_penumpang='$id'";
                 if (mysqli_query($conn, $sql)) {
                     echo '<script language="javascript">swal("Berhasil Edit!","","success").then(() => { window.location ="../DaftarLaporanPemesanan/LaporanPemesanan.php"; });</script>';

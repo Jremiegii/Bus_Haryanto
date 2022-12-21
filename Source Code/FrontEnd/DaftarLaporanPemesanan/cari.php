@@ -169,19 +169,19 @@ function delete()
       
             <?php if(isset($_POST['cari'])){ ?>
             <?php
-    include"../KoneksiDB.php";
+            include"../KoneksiDB.php";
 
-    $id = $_POST['cari_id'];
-    $cari = "SELECT * FROM calon_penumpang WHERE nama_penumpang LIKE '$id%'";
+            $id = $_POST['cari_id'];
+            $cari = "SELECT * FROM calon_penumpang WHERE nama_penumpang LIKE '$id%'";
 
-    $result = mysqli_query($conn, $cari);
-?>
+            $result = mysqli_query($conn, $cari);
+        ?>
 
             <?php if (mysqli_num_rows($result) > 0) { ?>
 
             <?php  while ($row = mysqli_fetch_assoc($result)) { ?>
             <?php include"../KoneksiDB.php"; ?>
-            <?php $sql = "SELECT id_penumpang, nama_penumpang, no_telpon FROM calon_penumpang WHERE nama_penumpang LIKE '$id%'" ; ?>
+            <?php $sql = "SELECT id_penumpang, nama_penumpang, no_telp_penumpang FROM calon_penumpang WHERE nama_penumpang LIKE '$id%'" ; ?>
             <?php  $result = mysqli_query($conn, $sql); ?>  
             <center>
             <center class='table'>
@@ -201,7 +201,7 @@ function delete()
                     <tr>
                         <td><?= $value['id_penumpang']; ?></td>
                         <td><?= $value['nama_penumpang']; ?></td>
-                        <td><?= $value['no_telpon']; ?></td>
+                        <td><?= $value['no_telp_penumpang']; ?></td>
                     </tr>
                 </table>
             </center>

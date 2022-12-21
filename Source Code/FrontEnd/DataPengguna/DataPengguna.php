@@ -62,11 +62,11 @@
           <br>
           <div class="row">
           <div class="mb-3">
-              <label for="Nama" class="form-label" id="JumlahTiket" disable>Id Pengguna</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pengguna" name="IdPengguna" disable>
+              <label for="Nama" class="form-label" id="NoTelpon">Id Pengguna</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Id Pengguna" name="IdPengguna">
             </div>
             <div class="mb-3">
-              <label for="Nama" class="form-label" id="JumlahTiket">Nama</label>
+              <label for="Nama" class="form-label" id="Nama">Nama</label>
               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama" name="Nama">
             </div>
             <div class="mb-3">
