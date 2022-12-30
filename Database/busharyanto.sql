@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2022 at 09:04 AM
+-- Generation Time: Dec 30, 2022 at 02:12 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -42,7 +42,11 @@ CREATE TABLE `agen` (
 --
 
 INSERT INTO `agen` (`id_agen`, `no_perusahaan`, `nama_agen`, `no_telp_agen`, `alamat_agen`, `email_agen`, `katasandi_agen`) VALUES
-('205314060', '36496062', 'Krisna', 85747471454, 'Maguwoharjo', 'priyananda65@gmail.com', '205314060');
+('205314000', '36496062', 'Clara', 91112341178, 'Paingan', 'clara@gmail.com', 'Clara'),
+('205314042', '36496062', 'Dandy', 891234, 'Babarsari', 'Dandy@gmail.com', 'DandyTegar'),
+('205314049', '36496062', 'Sally', 91112341780, 'Jogja', 'Sally@gmail.com', 'Sally'),
+('205314060', '36496062', 'Krisna', 85747471454, 'Maguwoharjo', 'priyananda65@gmail.com', 'Fransiskus'),
+('205314062', '36496062', 'Egi', 823447812, 'Paingan', 'Egi@gmail.com', 'AkuEgi');
 
 -- --------------------------------------------------------
 
@@ -61,7 +65,7 @@ CREATE TABLE `calon_penumpang` (
 --
 
 INSERT INTO `calon_penumpang` (`id_penumpang`, `nama_penumpang`, `no_telp_penumpang`) VALUES
-('123', 'Koil', 851234567);
+('21', 'James', 89711);
 
 -- --------------------------------------------------------
 
@@ -96,6 +100,13 @@ CREATE TABLE `data_penjualan` (
   `waktu_penjualan` date NOT NULL,
   `biaya` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `data_penjualan`
+--
+
+INSERT INTO `data_penjualan` (`kode_penjualan`, `id_penumpang`, `kode_tujuan`, `kode_tiket`, `waktu_penjualan`, `biaya`) VALUES
+(220, '21', 'SMG02', 'A101', '2022-12-21', 80000);
 
 -- --------------------------------------------------------
 
@@ -158,7 +169,8 @@ CREATE TABLE `tiket_tujuan` (
 --
 
 INSERT INTO `tiket_tujuan` (`kode_tujuan`, `kapasitas_tiket`, `status_ketersediaan`, `waktu_operasional`, `jam_operasional`, `asal_keberangkatan`, `tujuan_keberangkatan`, `harga_tiket`) VALUES
-('SMG01', 30, 'Tersedia', '2022-12-25', '14:00:00', 'Semarang', 'Jakarta', 70);
+('SMG01', 30, 'Tersedia', '2022-12-25', '14:00:00', 'Semarang', 'Jakarta', 70000),
+('SMG02', 30, 'Tersedia', '2022-12-25', '07:00:00', 'Semarang', 'Jakarta', 70000);
 
 --
 -- Indexes for dumped tables
@@ -220,7 +232,7 @@ ALTER TABLE `tiket_tujuan`
 -- AUTO_INCREMENT for table `data_penjualan`
 --
 ALTER TABLE `data_penjualan`
-  MODIFY `kode_penjualan` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_penjualan` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=222;
 
 --
 -- Constraints for dumped tables
